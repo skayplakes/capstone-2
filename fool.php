@@ -52,8 +52,9 @@
             <ul role='navigation' aria-label='Pagination' class='seq-pagination'>
                 <li><a href='#step1' rel='step1' title='Go to slide 1'><img style='width: 50px;' src='images/orphicon.svg'/></a></li>
                  
-                <li><a href='#step2' rel='step2' title='Go to slide 2'><img style='width: 50px;' src='images/legionfool.svg' /></a></li>
-                <li><a href='#step3' rel='step3' title='Go to slide 3'><img style='width: 50px;' src='images/hermesicon2.svg' /></a></li>
+                <li><a href='#step2' rel='step2' title='Go to slide 2'><img style='width: 50px;' src='images/Slime.jpg' /></a></li>
+                <li><a href='#step3' rel='step3' title='Go to slide 3'><img style='width: 50px;' src='images/legionfool.svg' /></a></li>
+                <li><a href='#step4' rel='step4' title='Go to slide 4'><img style='width: 50px;' src='images/ose.jpg' /></a></li>
               </ul>
         </div>";
     }

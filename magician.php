@@ -1,18 +1,17 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title></title>
+  <title></title>
 
-	<link rel="stylesheet" href="modern-slide-in/css/sequence-theme.modern-slide-in.css" />
+  <link rel="stylesheet" href="modern-slide-in/css/sequence-theme.modern-slide-in.css" />
 
-	<link rel="stylesheet" type="text/css" href="modern-slide-in/css/sequence-theme.modern-slide-in">
+  <link rel="stylesheet" type="text/css" href="modern-slide-in/css/sequence-theme.modern-slide-in">
 </head>
 <body>
 
 <?php
-
-  require('connection.php');
-    $sql = "SELECT * FROM persona WHERE arcanaName='Fool'";
+   require('connection.php');
+    $sql = "SELECT * FROM persona WHERE arcanaName='Magician'";
 
   $show = mysqli_query($connect,$sql);
 
@@ -50,17 +49,16 @@
             </fieldset>
 
             <ul role='navigation' aria-label='Pagination' class='seq-pagination'>
-                <li><a href='#step1' rel='step1' title='Go to slide 1'><img style='width: 50px;' src='images/orphicon.svg'/></a></li>
+                <li><a href='#step1' rel='step1' title='Go to slide 1'><img style='width: 50px;' src='images/hermes.jpg'/></a></li>
                  
-                <li><a href='#step2' rel='step2' title='Go to slide 2'><img style='width: 50px;' src='images/legionfool.svg' /></a></li>
-                <li><a href='#step3' rel='step3' title='Go to slide 3'><img style='width: 50px;' src='images/hermesicon2.svg' /></a></li>
+                <li><a href='#step2' rel='step2' title='Go to slide 2'><img style='width: 50px;' src='images/trismegistus.png' /></a></li>
+                <li><a href='#step3' rel='step3' title='Go to slide 3'><img style='width: 50px;' src='images/jackfrost.png' /></a></li>
               </ul>
         </div>";
     }
 
 
 ?>
-
 
 <script src="modern-slide-in/scripts/imagesloaded.pkgd.min.js"></script>
 <script src="modern-slide-in/scripts/hammer.min.js"></script>
