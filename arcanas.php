@@ -1,8 +1,3 @@
-<?php
-
-
-
-?>
 
 
 
@@ -12,23 +7,101 @@
 <head>
 	<title></title>
 
-	<meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 
-	<link rel="stylesheet" href="https://unpkg.com/purecss@1.0.0/build/pure-min.css" integrity="sha384-nn4HPE8lTHyVtfCBi5yW9d20FjT8BJwUXyWZT9InLYax14RDjBj46LmSztkmNP9w" crossorigin="anonymous">
+        <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
 
-	<link rel="stylesheet" type="text/css" href="css/layouts/side-menu.css">
+    <!-- Optional theme -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
 
-    <link rel="stylesheet" href="https://unpkg.com/purecss@1.0.0/build/grids-responsive-min.css">
+    <!-- Latest compiled and minified JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
 
-    <link rel="stylesheet" type="text/css" href="styles.css">
+    <style type="text/css">
+    </style>
 
 </head>
 <body>
 
-<div id="layout">
-    <!-- Menu toggle -->
+<div class="container">
+    <div class="col-md-2 row">
+        <ul class="nav nav-pills nav-stacked">
+          <li role="presentation" class="active"><a href="#">Fool</a></li>
+          <li role="presentation"><a href="#">Magician</a></li>
+          <li role="presentation"><a href="#">Priestess</a></li>
+          <li role="presentation"><a href="#">Empress</a></li>
+          <li role="presentation"><a href="#">Emperor</a></li>
+          <li role="presentation"><a href="#">Hierophant</a></li>
+          <li role="presentation"><a href="#">Lovers</a></li>
+          <li role="presentation"><a href="#">Chariot</a></li>
+          <li role="presentation"><a href="#">Justice</a></li>
+          <li role="presentation"><a href="#">Hermit</a></li>
+          <li role="presentation"><a href="#">Fortune</a></li>
+          <li role="presentation"><a href="#">Strength</a></li>
+          <li role="presentation"><a href="#">Hanged Man</a></li>
+          <li role="presentation"><a href="#">Death</a></li>
+          <li role="presentation"><a href="#">Temperance</a></li>
+          <li role="presentation"><a href="#">Devil</a></li>
+          <li role="presentation"><a href="#">Tower</a></li>
+          <li role="presentation"><a href="#">Star</a></li>
+          <li role="presentation"><a href="#">Moon</a></li>
+          <li role="presentation"><a href="#">Sun</a></li>
+          <li role="presentation"><a href="#">Judgement</a></li>
+          <li role="presentation"><a href="#">World</a></li>
+        </ul>
+    </div>
+</div>
+
+
+<?php
+
+require_once('connection.php');
+    $sql = "SELECT * FROM arcana";
+
+    $show = mysqli_query($connect,$sql);
+
+        if (mysqli_num_rows($show) > 0) {
+            echo "
+                <div class='container'>";
+        
+
+        while ($row = mysqli_fetch_assoc($show)) {
+            extract($row);
+            echo "
+                <div class='row'>
+                    <div class='row col-md-offset-4'>
+                        <img src='images/$arcanaImage'>
+                    </div>
+                    <div class='row col-md-offset-4'>
+                        <p>$arcanaDescription</p>
+                    </div>
+                </div>";
+        }
+
+        echo "</div>";
+    }
+
+?>
+
+    
+         
+    </div>
+
+    
+       
+
+
+
+
+
+
+
+
+<!-- <div id="layout">
     <a href="#menu" id="menuLink" class="menu-link">
-        <!-- Hamburger icon -->
         <span></span>
     </a>
 
@@ -122,7 +195,7 @@
             <div class="photo-box pure-u-1-1 pure-u-md-1-2 pure-u-lg-1-3">
                 <img class="pure-img img-centered" src="images/magician.png">
             </div>
-        </div>
+        </div> -->
 
         <!-- <div class="content">
             <h2 class="content-subhead">How to use this layout</h2>
@@ -155,13 +228,13 @@
                 Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
             </p>
         </div> -->
-    </div>
+<!--     </div>
 </div>
+ -->
 
 
 
-
-<script src="js/ui.js"></script>
+<!-- <script src="js/ui.js"></script> -->
 <!-- <script src="js/menus.js"></script> -->
 
 </body>

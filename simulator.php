@@ -51,8 +51,6 @@
 				        <td>$primaryName</td>
 				        <td>$primaryDescription</td>
 				        <td>$primaryDamage</td>
-				      </tr>
-
 
 				    </tbody>
 				      

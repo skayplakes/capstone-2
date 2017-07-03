@@ -12,7 +12,8 @@
 <?php
 
   require('connection.php');
-    $sql = "SELECT * FROM persona WHERE arcanaName='Fool'";
+  
+  $sql = "SELECT * FROM persona WHERE arcanaName='Fool'";
 
   $show = mysqli_query($connect,$sql);
 
@@ -23,40 +24,57 @@
                 <ul class='seq-canvas'>";
                 
       while ($row = mysqli_fetch_assoc($show)) { 
-        extract($row);
+          extract($row);
 
+          echo "
+                <li class='seq-in'>
+                  <div class='seq-model'>
+                    <img data-seq src='images/$image' />
+                  </div>
+
+                  <div class='seq-title'>
+                    <h2 data-seq>$name</h2>
+                    <h3 data-seq>$description</h3>
+
+                  </div>
+
+
+                </li>
+                
+                ";           
+        }
         echo "
-              <li class='seq-in'>
-                <div class='seq-model'>
-                  <img data-seq src='images/$image' alt='Orpheus' />
-                </div>
-
-                <div class='seq-title'>
-                  <h2 data-seq>$name</h2>
-                  <h3 data-seq>$description</h3>
-
-                </div>
-              </li>
-              
-              ";           
-      }
-        echo "
-              </ul>
-            </div>
+                </ul>
+              </div>
 
             <fieldset class='seq-nav' aria-controls='sequence' aria-label='Slider buttons'>
               <button type='button' class='seq-prev' aria-label='Previous'>Previous</button>
               <button type='button' class='seq-next' aria-label='Next'>Next</button>
             </fieldset>
 
-            <ul role='navigation' aria-label='Pagination' class='seq-pagination'>
-                <li><a href='#step1' rel='step1' title='Go to slide 1'><img style='width: 50px;' src='images/orphicon.svg'/></a></li>
-                 
-                <li><a href='#step2' rel='step2' title='Go to slide 2'><img style='width: 50px;' src='images/Slime.jpg' /></a></li>
-                <li><a href='#step3' rel='step3' title='Go to slide 3'><img style='width: 50px;' src='images/legionfool.svg' /></a></li>
-                <li><a href='#step4' rel='step4' title='Go to slide 4'><img style='width: 50px;' src='images/ose.jpg' /></a></li>
+              <ul role='navigation' aria-label='Pagination' class='seq-pagination'>
+                  <li><a href='#step1' rel='step1' title='Go to slide 1'><img style='width: 50px;' src='images/orphicon.svg'/></a></li>
+                   
+                  <li><a href='#step2' rel='step2' title='Go to slide 2'><img style='width: 50px;' src='images/Slime.jpg' /></a></li>
+                  <li><a href='#step3' rel='step3' title='Go to slide 3'><img style='width: 50px;' src='images/legionfool.svg' /></a></li>
+                  <li><a href='#step4' rel='step4' title='Go to slide 4'><img style='width: 50px;' src='images/ose.jpg' /></a></li>
               </ul>
+
         </div>";
+
+        echo "
+          <div class='container'>
+            <div class='row'>
+              <div class='col-xs-8'> 
+
+                <a href='addpersona.php'><button class='btn btn-default btn-md'>Add Persona</button></a>
+
+                <a href='edit.php?id=$id'><button class='btn btn-default btn-md'>Edit</button></a>
+
+                <a href='delete.php?id=$id'><button class='btn btn-danger btn-md'>Delete</button></a>
+              </div>
+            </div>
+          </div>";
     }
 
 

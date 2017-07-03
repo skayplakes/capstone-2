@@ -678,7 +678,7 @@ function defineSequence(imagesLoaded, Hammer) {
         "prevButton": "seq-prev",
         "autoPlayButton": "seq-autoplay",
         "pagination": "seq-pagination",
-        "preloader": "seq-preloader"
+        "preloader": "seq-preloader",
       },
 
       /**
