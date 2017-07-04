@@ -37,6 +37,7 @@
 <body class="home">
 
 <?php
+
 	require_once('connection.php');
 	$sql = "SELECT * FROM persona WHERE arcanaName='Fool'";
 
@@ -44,7 +45,6 @@
 
     	if (mysqli_num_rows($show) > 0) {
     	
-
     	while ($row = mysqli_fetch_assoc($show)) { 
           extract($row);
           	echo "<div class='row>

@@ -3,88 +3,110 @@
 <head>
 	<title></title>
 
-	<link rel="stylesheet" href="modern-slide-in/css/sequence-theme.modern-slide-in.css" />
+	<meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 
-	<link rel="stylesheet" type="text/css" href="modern-slide-in/css/sequence-theme.modern-slide-in">
+	<title></title>
+
+	<!-- Latest compiled and minified CSS -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+	<!-- Optional theme -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+
+	<link href="https://fonts.googleapis.com/css?family=Permanent+Marker" rel="stylesheet">
+
+
+
+
+
+
+	<style type="text/css">
+
+		body, html {
+			height: 100%;
+			margin: 0;	
+			background-image: url(images/list.jpg);
+			background-repeat:no-repeat;
+			-webkit-background-size:cover;
+			-moz-background-size:cover;
+			-o-background-size:cover;
+
+/*			background-size:cover;
+			background-position:center;*/ 
+
+			/*check this for responsiveness */
+
+		}
+
+		html { 
+		  /*background: url("images/background.png") no-repeat center center fixed; */
+		  
+		}
+/*		img {
+			width: 200px;
+			height: 200px;
+		}
+
+*/		
+		h1 {
+			color: black;
+			font-family: 'Permanent Marker', cursive;
+		}
+
+	</style>
+
+	
+
+
+
 </head>
 <body>
 
 <?php
 
-  require('connection.php');
-  
-  $sql = "SELECT * FROM persona WHERE arcanaName='Fool'";
+	echo "<div class='bg'></div>";
 
-  $show = mysqli_query($connect,$sql);
+	require_once('connection.php');
+	$sql = "SELECT * FROM persona WHERE arcanaName='Fool'";
 
-    if (mysqli_num_rows($show) > 0) {
-      echo "<div id='sequence' class='seq'>
+	$show = mysqli_query($connect,$sql);
 
-              <div class='seq-screen'>
-                <ul class='seq-canvas'>";
-                
-      while ($row = mysqli_fetch_assoc($show)) { 
+    	if (mysqli_num_rows($show) > 0) {
+    	
+    	while ($row = mysqli_fetch_assoc($show)) { 
           extract($row);
+          	echo "
+          		<div class='container-fluid'>
+	          		<div class='row>
+	          			<div class='offset-md-2 col-md-8>
+	          				<div class='row col-sm-4'>
+	          					<a href='update.php?id=$id'>
+		          					<h1>$name</h1>
+		          				</a>
+		          			</div>
+		          		</div>
+		          	</div>
+		        </div>";
 
-          echo "
-                <li class='seq-in'>
-                  <div class='seq-model'>
-                    <img data-seq src='images/$image' />
-                  </div>
+      		}
+      	}
 
-                  <div class='seq-title'>
-                    <h2 data-seq>$name</h2>
-                    <h3 data-seq>$description</h3>
-
-                  </div>
-
-
-                </li>
-                
-                ";           
-        }
-        echo "
-                </ul>
-              </div>
-
-            <fieldset class='seq-nav' aria-controls='sequence' aria-label='Slider buttons'>
-              <button type='button' class='seq-prev' aria-label='Previous'>Previous</button>
-              <button type='button' class='seq-next' aria-label='Next'>Next</button>
-            </fieldset>
-
-              <ul role='navigation' aria-label='Pagination' class='seq-pagination'>
-                  <li><a href='#step1' rel='step1' title='Go to slide 1'><img style='width: 50px;' src='images/orphicon.svg'/></a></li>
-                   
-                  <li><a href='#step2' rel='step2' title='Go to slide 2'><img style='width: 50px;' src='images/Slime.jpg' /></a></li>
-                  <li><a href='#step3' rel='step3' title='Go to slide 3'><img style='width: 50px;' src='images/legionfool.svg' /></a></li>
-                  <li><a href='#step4' rel='step4' title='Go to slide 4'><img style='width: 50px;' src='images/ose.jpg' /></a></li>
-              </ul>
-
-        </div>";
-
-        echo "
-          <div class='container'>
-            <div class='row'>
-              <div class='col-xs-8'> 
-
-                <a href='addpersona.php'><button class='btn btn-default btn-md'>Add Persona</button></a>
-
-                <a href='edit.php?id=$id'><button class='btn btn-default btn-md'>Edit</button></a>
-
-                <a href='delete.php?id=$id'><button class='btn btn-danger btn-md'>Delete</button></a>
-              </div>
-            </div>
-          </div>";
-    }
 
 
 ?>
 
 
-<script src="modern-slide-in/scripts/imagesloaded.pkgd.min.js"></script>
-<script src="modern-slide-in/scripts/hammer.min.js"></script>
-<script src="modern-slide-in/scripts/sequence.min.js"></script>
-<script src="modern-slide-in/scripts/sequence-theme.modern-slide-in.js"></script>
+
+	
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+
+	<!-- Latest compiled and minified JavaScript -->
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+	</script>
 
 </body>
 </html>

@@ -17,6 +17,10 @@
     <!-- Optional theme -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
 
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+      crossorigin="anonymous"></script>
+       
+
     <!-- <link rel="stylesheet" type="text/css" href="lightbox/dist/css/lightbox.css"> -->
 
     <style type="text/css">
@@ -36,16 +40,39 @@
         #description {
             display: none;
         }
+
+        /* Paste this css to your style sheet file or under head tag */
+        /* This only works with JavaScript, 
+        if it's not present, don't show loader */
+        /*.no-js #loader { 
+            display: none;  
+        }
+        .js #loader { 
+            display: block; 
+            position: absolute; 
+            left: 100px; 
+            top: 0; 
+        }
+
+        .se-pre-con {
+            position: fixed;
+            left: 0px;
+            top: 0px;
+            width: 100%;
+            height: 100%;
+            z-index: 9999;
+            background: url(images/loading.gif) center no-repeat #fff;
+        }*/
+
     </style>
-
-    
-
 
 
 </head>
 <body>
 
 <?php
+
+
 
 require_once('connection.php');
     $sql = "SELECT * FROM arcana";
@@ -67,8 +94,11 @@ require_once('connection.php');
                         <a href='#'><span id=".$id." onclick='hideDescription(this.id);'>Hide</span></a>
 
                         <p id='description".$id."'>$arcanaDescription</p>
+
+                        <a href='new2.php'><p>Click here to see the list of Personas</p></a>
                     </div>
                 </div>
+
                 ";
                     
         }
@@ -83,6 +113,11 @@ require_once('connection.php');
 
     <script type="text/javascript">
 
+        $(document).ready(function() {
+            var value = id;
+            document.getElementById("description"+value).style.display = "none";
+        }); //fix this
+
         function showDescription(id) {
             var value = id;
             document.getElementById("description"+value).style.display = "block";
@@ -92,15 +127,16 @@ require_once('connection.php');
             var value = id;
             document.getElementById("description"+value).style.display = "none";
         }
+
+         //paste this code under the head tag or in a separate js file.
+        // Wait for window load
+        
         
     </script>
-
-
+    
     <!-- <script src="lightbox/dist/js/lightbox.js"></script> -->
 
-    <script src="https://code.jquery.com/jquery-3.2.1.min.js"
-      integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
-      crossorigin="anonymous"></script>    
+       
 
     <!-- Latest compiled and minified JavaScript -->
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>

@@ -1,56 +1,3 @@
-<?php
-session_start();
-
-	if (isset($_POST['register'])) {
-    require 'connection.php';
-    $first_name = $_POST['first_name'];
-    $last_name = $_POST['last_name'];
-    $username = $_POST['username'];
-    $email = $_POST['email'];
-    $pw1 = $_POST['pw1'];
-    $pw1_2 = $_POST['pw1_2'];
-
-    if($pw1 == $pw1_2) {
-    $pw1 = sha1($pw1);
-    $sql = "INSERT INTO users (first_name, last_name, username, password, email, role) VALUES ('$first_name', '$last_name', '$username', '$pw1', '$email','user')";
-    mysqli_query($connect,$sql);
-
-    echo "Registered successfully";
-
-  }
-}
-
-	if (isset($_POST['login'])) {
-		require 'connection.php';
-		$username = $_POST['username'];
-		$password = sha1($_POST['password']);
-		$sql = "SELECT * FROM users WHERE username = '$username' AND password = '$password'";
-
-		$result = mysqli_query($connect,$sql);
-
-		if (mysqli_num_rows($result) > 0) {
-			while ($row = mysqli_fetch_assoc($result)) {
-				extract($row);
-				$_SESSION['message'] = "Login Successful";
-				$_SESSION['username'] = $username;
-				$_SESSION['role'] = $role;
-
-        if ($sql == true) {
-            echo "<div class='alert alert-success'>Login Succesful! Welcome $role $username!</div>";
-            header('location: arcanas.php');
-        } 
-			}
-		} else {
-          echo "<div class='alert alert-danger'>Incorrect admin credentials entered! Please try again!</div>";
-      } 
-
-	}
-
-
-
-?>
-
-
 <!DOCTYPE html>
 <html>
 <head>
@@ -66,15 +13,28 @@ session_start();
     <!-- Optional theme -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
 
+    <link href="https://fonts.googleapis.com/css?family=Permanent+Marker" rel="stylesheet">
+
     <link rel="stylesheet" type="text/css" href="login/css/style.css">
+
 
 	
     <style type="text/css">
         
         body {
-            background-color: green;
+            background-color: red;
             color: black;
         }
+
+        h1 {
+          font-family: 'Permanent Marker', cursive;
+        }
+
+       /* #frontlogo {
+          display: block;
+          margin: 0 auto;
+
+        }*/
 
     </style>
 </head>
@@ -82,6 +42,78 @@ session_start();
 
 
 <body>
+
+<div class="container">
+  <div class="row">
+    <div class="col-md-6 col-md-offset-3">
+      <img src="images/asd.png" class="img-center center-block img-responsive">
+    </div>
+  </div>
+</div>
+
+<div class="container">
+  <div class="row">
+    <img src="images/compendiumedit.png" class="img-center center-block img-responsive">
+  </div>
+</div>
+
+
+
+
+<?php
+session_start();
+
+  if (isset($_POST['register'])) {
+    require 'connection.php';
+    $first_name = $_POST['first_name'];
+    $last_name = $_POST['last_name'];
+    $username = $_POST['username'];
+    $email = $_POST['email'];
+    $pw1 = $_POST['pw1'];
+    $pw1_2 = $_POST['pw1_2'];
+
+    if($pw1 == $pw1_2) {
+    $pw1 = sha1($pw1);
+    $sql = "INSERT INTO users (first_name, last_name, username, password, email, role) VALUES ('$first_name', '$last_name', '$username', '$pw1', '$email','user')";
+    mysqli_query($connect,$sql);
+
+    echo "<script type='text/javascript'>alert('Registered successfully!')</script>";
+
+  }
+}
+
+  if (isset($_POST['login'])) {
+    require 'connection.php';
+    $username = $_POST['username'];
+    $password = sha1($_POST['password']);
+    $sql = "SELECT * FROM users WHERE username = '$username' AND password = '$password'";
+
+    $result = mysqli_query($connect,$sql);
+
+    if (mysqli_num_rows($result) > 0) {
+      while ($row = mysqli_fetch_assoc($result)) {
+        extract($row);
+        $_SESSION['message'] = "Login Successful";
+        $_SESSION['username'] = $username;
+        $_SESSION['role'] = $role;
+
+        if ($sql == true) {
+          echo "<script type='text/javascript'>alert('Login successful!');
+          window.location.href='arcanas.php';
+          </script>"; /*to generate an alert box and to redirect if successful*/
+          
+        } 
+      }
+    } else {
+          echo "<script type='text/javascript'>alert('failed!')</script>";
+        } 
+
+  }
+
+
+
+?>
+
 
   <div class="form">
       
@@ -140,7 +172,7 @@ session_start();
             <input type="password"required autocomplete="off" name="pw1_2" />
           </div>
           
-          <button type="submit" class="button button-block" name="register" />Get Started</button>
+          <button type="submit" class="button button-block" name="register" />Sign on the contract!</button>
           
           </form>
 
