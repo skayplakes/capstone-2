@@ -1,3 +1,5 @@
+
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -10,9 +12,7 @@
 	<!-- Latest compiled and minified CSS -->
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
 
-
 	<link href="https://fonts.googleapis.com/css?family=Permanent+Marker" rel="stylesheet">
-
 
 	<style type="text/css">
 
@@ -92,28 +92,6 @@ a.expand {
 }
 
 /* ============================================================
-  EFFECT 1 - SLIDE IN BOTTOM
-============================================================ */
-/*#effect-1 .overlay {
-  bottom: 0;
-  left: 0;
-  right: 0;
-  width: 100%;
-  height: 0;
-}
-#effect-1 .overlay a.expand {
-  left: 0;
-  right: 0;
-  bottom: 50%;
-  margin: 0 auto -30px auto;
-}
-#effect-1 .img.hover .overlay {
-  height: 100%;
-}*/
-
-
-
-/* ============================================================
   EFFECT 5 - ICON BORDER ANIMATE
 ============================================================ */
 #effect-5 .overlay {
@@ -153,73 +131,17 @@ a.expand {
   -o-border-radius: 30px;
   border-radius: 30px;
 }
-		/*img {
-			width: 200px;
-			height: 200px;
-		}*/
-
-		/*.container {
-		    position: relative;
-		    width: 50%;
-		}
-
-		.image {
-		  opacity: 1;
-		  display: block;
-		  width: 100%;
-		  height: auto;
-		  transition: .5s ease;
-		  backface-visibility: hidden;
-		}
-
-		.middle {
-		  transition: .5s ease;
-		  opacity: 0;
-		  position: absolute;
-		  top: 50%;
-		  left: 50%;
-		  transform: translate(-50%, -50%);
-		  -ms-transform: translate(-50%, -50%)
-		}
-
-		.container:hover .image {
-		  opacity: 0.3;
-		}
-
-		.container:hover .middle {
-		  opacity: 1;
-		}*/
-
-		/*.text {
-			background-color: black;
-			color: red;*/
-
-		  /*background-color: #4CAF50;
-		  color: white;*/
-
-/*		  font-size: 16px;
-		  padding: 16px 32px;
-		  font-family: 'Permanent Marker', cursive;
-		}*/
-
-
-		
-
-	</style>
-
-	
-
-
 
 </head>
+<body>
 
 <?php
 
 	require_once('connection.php');
 
-	$arcanaId = $_GET['category'];
+	$arcanaId = $_GET['$arcanaName'];
 
-	$sql = "SELECT * FROM persona WHERE arcanaName='$arcanaId'";
+	$sql = "SELECT * FROM persona WHERE arcanaName='arcanaId'";
 
 	$show = mysqli_query($connect,$sql);
 
@@ -243,73 +165,8 @@ a.expand {
 
 						</div>
 					</div>";
-				    
-          	// echo "<div class='row>
-          	// 		<div class='offset-md-2 col-md-8>
-          	// 			<div class='row col-sm-4'>
-          	// 				<a href='update.php?id=$id'>
-	          // 					<img src='images/$image' />
-	          // 				</a>
-	          // 			</div>
-	          // 		</div>
-	          // 	</div";
-
-     //      		echo "<div class='container'>
-					// 	  <img src='images/$image' class='image' style='width:100%'>
-					// 	  <div class='middle'>
-					// 	    <div class='text'>$name</div>
-					// 	  </div>
-					// </div>";
-
-      		}
-      	}
-
-		
 
 ?>
-
-
-
-
-	
-	<script src="modernizr.js"></script>
-
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-
-	<!-- Latest compiled and minified JavaScript -->
-	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
-
-	<script type="text/javascript">
-		$(document).ready(function(){
-		    if (Modernizr.touch) {
-		        // show the close overlay button
-		        $(".close-overlay").removeClass("hidden");
-		        // handle the adding of hover class when clicked
-		        $(".img").click(function(e){
-		            if (!$(this).hasClass("hover")) {
-		                $(this).addClass("hover");
-		            }
-		        });
-		        // handle the closing of the overlay
-		        $(".close-overlay").click(function(e){
-		            e.preventDefault();
-		            e.stopPropagation();
-		            if ($(this).closest(".img").hasClass("hover")) {
-		                $(this).closest(".img").removeClass("hover");
-		            }
-		        });
-		    } else {
-		        // handle the mouseenter functionality
-		        $(".img").mouseenter(function(){
-		            $(this).addClass("hover");
-		        })
-		        // handle the mouseleave functionality
-		        .mouseleave(function(){
-		            $(this).removeClass("hover");
-		        });
-		    }
-		});
-	</script>
 
 </body>
 </html>

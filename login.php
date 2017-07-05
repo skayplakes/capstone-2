@@ -22,12 +22,28 @@
     <style type="text/css">
         
         body {
-            background-color: red;
+            background-image: url(images/Day.png);
             color: black;
+            background-repeat: no-repeat;
+            background-position: center center;
+            background-attachment: fixed;
+            background-size: cover;
+
         }
 
         h1 {
           font-family: 'Permanent Marker', cursive;
+        }
+
+        .bannerimage {
+          font-size: 6em;
+          color: red;
+          word-wrap: break-word;
+           -webkit-hyphens: auto;
+           -moz-hyphens: auto;
+           -ms-hyphens: auto;
+           -o-hyphens: auto;
+           hyphens: auto;
         }
 
        /* #frontlogo {
@@ -53,7 +69,8 @@
 
 <div class="container">
   <div class="row">
-    <img src="images/compendiumedit.png" class="img-center center-block img-responsive">
+    <!-- <img src="images/compendiumedit.png" class="img-center center-block img-responsive"> -->
+    <h1 class="bannerimage">Compendium</h1>
   </div>
 </div>
 
@@ -116,7 +133,6 @@ session_start();
 
 
   <div class="form">
-      
       <ul class="tab-group">
         <li class="tab active"><a href="#signup">Sign Up</a></li>
         <li class="tab"><a href="#login">Log In</a></li>
@@ -206,6 +222,7 @@ session_start();
         </div>
         
       </div><!-- tab-content -->
+  </div>
 
 <!-- Latest compiled and minified JavaScript -->
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>

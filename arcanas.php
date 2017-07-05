@@ -26,10 +26,12 @@
     <style type="text/css">
         body {
             background-color: black;
+            background-image: -webkit-linear-gradient(40deg, red 50%, black 50%); 
+            /*half-red, half-black background color*/
         }
 
         h2 {
-            color: red;
+            color: white;
             text-align: center;
         }
 
@@ -90,16 +92,16 @@ require_once('connection.php');
                     </div>
                     <div class='row col-sm-8'>
                         <h2>$arcanaName</h2>
-                        <a href='#'><span id=".$id." onclick='showDescription(this.id);'>Show</span></a>
-                        <a href='#'><span id=".$id." onclick='hideDescription(this.id);'>Hide</span></a>
+                        <button type='button' class='btn btn-default' data-toggle='collapse' data-target='#description".$id."'>Click to show description</button>
+                            <p id='description".$id."' class='collapse'>$arcanaDescription</p>
 
-                        <p id='description".$id."'>$arcanaDescription</p>
+                            ".'<br>'."";
 
-                        <a href='new2.php'><p>Click here to see the list of Personas</p></a>
+                            echo '<a href="new2.php?category='.$arcanaName.'"><p>Click here to see the list of Personas</p></a>
                     </div>
-                </div>
+                </div>';
 
-                ";
+                
                     
         }
 
@@ -110,32 +112,7 @@ require_once('connection.php');
     
          
     </div>
-
-    <script type="text/javascript">
-
-        $(document).ready(function() {
-            var value = id;
-            document.getElementById("description"+value).style.display = "none";
-        }); //fix this
-
-        function showDescription(id) {
-            var value = id;
-            document.getElementById("description"+value).style.display = "block";
-        }
-
-        function hideDescription(id) {
-            var value = id;
-            document.getElementById("description"+value).style.display = "none";
-        }
-
-         //paste this code under the head tag or in a separate js file.
-        // Wait for window load
-        
-        
-    </script>
     
-    <!-- <script src="lightbox/dist/js/lightbox.js"></script> -->
-
        
 
     <!-- Latest compiled and minified JavaScript -->
