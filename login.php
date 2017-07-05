@@ -22,7 +22,7 @@
     <style type="text/css">
         
         body {
-            background-image: url(images/Day.png);
+            background-image: url(images/city3.gif);
             color: black;
             background-repeat: no-repeat;
             background-position: center center;
@@ -37,7 +37,7 @@
 
         .bannerimage {
           font-size: 6em;
-          color: red;
+          color: white;
           word-wrap: break-word;
            -webkit-hyphens: auto;
            -moz-hyphens: auto;
