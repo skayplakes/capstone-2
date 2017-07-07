@@ -1,7 +1,3 @@
-
-
-
-
 <!DOCTYPE html>
 <html>
 <head>
@@ -14,18 +10,14 @@
         <!-- Latest compiled and minified CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
 
-    <!-- Optional theme -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
-
     <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
       crossorigin="anonymous"></script>
-       
 
-    <!-- <link rel="stylesheet" type="text/css" href="lightbox/dist/css/lightbox.css"> -->
+    <link href="https://fonts.googleapis.com/css?family=Permanent+Marker" rel="stylesheet">
 
     <style type="text/css">
         body {
-            background-color: black;
+            /*background-color: black;*/
             background-image: -webkit-linear-gradient(40deg, red 50%, black 50%); 
             /*half-red, half-black background color*/
         }
@@ -33,6 +25,7 @@
         h2 {
             color: white;
             text-align: center;
+            font-family: 'Permanent Marker', cursive;
         }
 
         span, p {
@@ -42,29 +35,6 @@
         #description {
             display: none;
         }
-
-        /* Paste this css to your style sheet file or under head tag */
-        /* This only works with JavaScript, 
-        if it's not present, don't show loader */
-        /*.no-js #loader { 
-            display: none;  
-        }
-        .js #loader { 
-            display: block; 
-            position: absolute; 
-            left: 100px; 
-            top: 0; 
-        }
-
-        .se-pre-con {
-            position: fixed;
-            left: 0px;
-            top: 0px;
-            width: 100%;
-            height: 100%;
-            z-index: 9999;
-            background: url(images/loading.gif) center no-repeat #fff;
-        }*/
 
     </style>
 
@@ -92,33 +62,25 @@ require_once('connection.php');
                     </div>
                     <div class='row col-sm-8'>
                         <h2>$arcanaName</h2>
-                        <button type='button' class='btn btn-default' data-toggle='collapse' data-target='#description".$id."'>Click to show description</button>
+                        <button type='button' class='btn btn-default' data-toggle='collapse' data-target='#description".$id."'>Click to show description</button>".'<br>'."
                             <p id='description".$id."' class='collapse'>$arcanaDescription</p>
 
                             ".'<br>'."";
 
                             echo '<a href="new2.php?category='.$arcanaName.'"><p>Click here to see the list of Personas</p></a>
                     </div>
-                </div>';
-
-                
-                    
+                </div>';              
+           
         }
 
     }
 
 ?>
-
+  
+</div>
     
-         
-    </div>
-    
-       
-
     <!-- Latest compiled and minified JavaScript -->
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
-
-
 
 </body>
 </html>

@@ -10,212 +10,198 @@
 	<!-- Latest compiled and minified CSS -->
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
 
-
 	<link href="https://fonts.googleapis.com/css?family=Permanent+Marker" rel="stylesheet">
-
 
 	<style type="text/css">
 
 	/* ============================================================
-  GLOBAL
-============================================================ */
-.effects {
-  padding-left: 15px;
-}
-.effects .img {
-  position: relative;
-  float: left;
-  margin-bottom: 5px;
-  width: 25%;
-  overflow: hidden;
-}
-.effects .img:nth-child(n) {
-  margin-right: 5px;
-}
-.effects .img:first-child {
-  margin-left: -15px;
-}
-.effects .img:last-child {
-  margin-right: 0;
-}
-.effects .img img {
-  display: block;
-  margin: 0;
-  padding: 0;
-  max-width: 100%;
-  height: auto;
-}
+	  GLOBAL
+	============================================================ */
+	.effects {
+	  padding-left: 15px;
+	}
+	.effects .img {
+	  position: relative;
+	  float: left;
+	  margin-bottom: 5px;
+	  width: 25%;
+	  overflow: hidden;
+	}
+	.effects .img:nth-child(n) {
+	  margin-right: 5px;
+	}
+	.effects .img:first-child {
+	  margin-left: -15px;
+	}
+	.effects .img:last-child {
+	  margin-right: 0;
+	}
+	.effects .img img {
+	  display: block;
+	  margin: 0;
+	  padding: 0;
+	  max-width: 100%;
+	  height: auto;
+	}
 
-.overlay {
-  display: block;
-  position: absolute;
-  z-index: 20;
-  background: rgba(0, 0, 0, 0.8);
-  overflow: hidden;
-  transition: all 0.5s;
-  opacity: 0.5; /*opacity of transition overlay*/
-}
+	.overlay {
+	  display: block;
+	  position: absolute;
+	  z-index: 20;
+	  background: rgba(0, 0, 0, 0.8);
+	  overflow: hidden;
+	  transition: all 0.5s;
+	  opacity: 0.5; /*opacity of transition overlay*/
+	}
 
-a.close-overlay {
-  display: block;
-  position: absolute;
-  top: 0;
-  right: 0;
-  z-index: 100;
-  width: 45px;
-  height: 45px;
-  font-size: 20px;
-  font-weight: 700;
-  color: #fff;
-  line-height: 45px;
-  text-align: center;
-  background-color: #000;
-  cursor: pointer;
-}
-a.close-overlay.hidden {
-  display: none;
-}
+	a.close-overlay {
+	  display: block;
+	  position: absolute;
+	  top: 0;
+	  right: 0;
+	  z-index: 100;
+	  width: 45px;
+	  height: 45px;
+	  font-size: 20px;
+	  font-weight: 700;
+	  color: #fff;
+	  line-height: 45px;
+	  text-align: center;
+	  background-color: #000;
+	  cursor: pointer;
+	}
+	a.close-overlay.hidden {
+	  display: none;
+	}
 
-a.expand {
-  display: block;
-  position: absolute;
-  z-index: 100;
-  width: 60px;
-  height: 60px;
-  border: solid 5px #fff;
-  text-align: center;
-  color: #fff;
-  line-height: 50px;
-  font-weight: 700;
-  font-size: 30px;
-  border-radius: 30px;
-}
+	a.expand {
+	  display: block;
+	  position: absolute;
+	  z-index: 100;
+	  width: 60px;
+	  height: 60px;
+	  border: solid 5px #fff;
+	  text-align: center;
+	  color: #fff;
+	  line-height: 50px;
+	  font-weight: 700;
+	  font-size: 30px;
+	  border-radius: 30px;
+	}
 
-/* ============================================================
-  EFFECT 1 - SLIDE IN BOTTOM
-============================================================ */
-/*#effect-1 .overlay {
-  bottom: 0;
-  left: 0;
-  right: 0;
-  width: 100%;
-  height: 0;
-}
-#effect-1 .overlay a.expand {
-  left: 0;
-  right: 0;
-  bottom: 50%;
-  margin: 0 auto -30px auto;
-}
-#effect-1 .img.hover .overlay {
-  height: 100%;
-}*/
+	/* ============================================================
+	  EFFECT 5 - ICON BORDER ANIMATE
+	============================================================ */
+	#effect-5 .overlay {
+	  top: 0;
+	  bottom: 0;
+	  left: 0;
+	  right: 0;
+	  opacity: 0;
+	}
+	#effect-5 .overlay a.expand {
+	  top: 0;
+	  bottom: 0;
+	  left: 0;
+	  right: 0;
+	  margin: auto;
+	  width: 100%;
+	  height: 100%;
+	  -webkit-border-radius: 0;
+	  -moz-border-radius: 0;
+	  -ms-border-radius: 0;
+	  -o-border-radius: 0;
+	  border-radius: 0;
+	  -webkit-transition: all 0.5s;
+	  -moz-transition: all 0.5s;
+	  -o-transition: all 0.5s;
+	  transition: all 0.5s;
+	}
+	#effect-5 .img.hover .overlay {
+	  opacity: 1;
+	}
+	#effect-5 .img.hover .overlay a.expand {
+	  width: 60px;
+	  height: 60px;
+	  -webkit-border-radius: 30px;
+	  -moz-border-radius: 30px;
+	  -ms-border-radius: 30px;
+	  -o-border-radius: 30px;
+	  border-radius: 30px;
+	}
 
 
 
-/* ============================================================
-  EFFECT 5 - ICON BORDER ANIMATE
-============================================================ */
-#effect-5 .overlay {
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  opacity: 0;
-}
-#effect-5 .overlay a.expand {
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  margin: auto;
-  width: 100%;
-  height: 100%;
-  -webkit-border-radius: 0;
-  -moz-border-radius: 0;
-  -ms-border-radius: 0;
-  -o-border-radius: 0;
-  border-radius: 0;
-  -webkit-transition: all 0.5s;
-  -moz-transition: all 0.5s;
-  -o-transition: all 0.5s;
-  transition: all 0.5s;
-}
-#effect-5 .img.hover .overlay {
-  opacity: 1;
-}
-#effect-5 .img.hover .overlay a.expand {
-  width: 60px;
-  height: 60px;
-  -webkit-border-radius: 30px;
-  -moz-border-radius: 30px;
-  -ms-border-radius: 30px;
-  -o-border-radius: 30px;
-  border-radius: 30px;
-}
-		/*img {
-			width: 200px;
-			height: 200px;
-		}*/
+	body {
+	    background-image: url(images/qwe.jpg);
+	    color: black;
+	    background-repeat: no-repeat;
+	    background-position: center center;
+	    background-attachment: fixed;
+	    background-size: cover;
 
-		/*.container {
-		    position: relative;
-		    width: 50%;
-		}
+    }
+			/*img {
+				width: 200px;
+				height: 200px;
+			}*/
 
-		.image {
-		  opacity: 1;
-		  display: block;
-		  width: 100%;
-		  height: auto;
-		  transition: .5s ease;
-		  backface-visibility: hidden;
-		}
+			/*.container {
+			    position: relative;
+			    width: 50%;
+			}
 
-		.middle {
-		  transition: .5s ease;
-		  opacity: 0;
-		  position: absolute;
-		  top: 50%;
-		  left: 50%;
-		  transform: translate(-50%, -50%);
-		  -ms-transform: translate(-50%, -50%)
-		}
+			.image {
+			  opacity: 1;
+			  display: block;
+			  width: 100%;
+			  height: auto;
+			  transition: .5s ease;
+			  backface-visibility: hidden;
+			}
 
-		.container:hover .image {
-		  opacity: 0.3;
-		}
+			.middle {
+			  transition: .5s ease;
+			  opacity: 0;
+			  position: absolute;
+			  top: 50%;
+			  left: 50%;
+			  transform: translate(-50%, -50%);
+			  -ms-transform: translate(-50%, -50%)
+			}
 
-		.container:hover .middle {
-		  opacity: 1;
-		}*/
+			.container:hover .image {
+			  opacity: 0.3;
+			}
 
-		/*.text {
-			background-color: black;
-			color: red;*/
+			.container:hover .middle {
+			  opacity: 1;
+			}*/
 
-		  /*background-color: #4CAF50;
-		  color: white;*/
+			/*.text {
+				background-color: black;
+				color: red;*/
 
-/*		  font-size: 16px;
-		  padding: 16px 32px;
-		  font-family: 'Permanent Marker', cursive;
-		}*/
+			  /*background-color: #4CAF50;
+			  color: white;*/
+
+	/*		  font-size: 16px;
+			  padding: 16px 32px;
+			  font-family: 'Permanent Marker', cursive;
+			}*/
 
 
 		
 
 	</style>
 
-	
-
-
-
 </head>
+
+<body>
 
 <?php
 
-	require_once('connection.php');
+	require('connection.php');
 
 	$arcanaId = $_GET['category'];
 
@@ -233,7 +219,7 @@ a.expand {
 		          		<div class='row'>	
 		          			<div id='effect-5' class='effects clearfix'>
 							    <div class='img'>
-							        <img src='images/$image' alt=''>
+							        <img src='images/$image' alt='personaimages'>
 							        <div class='overlay'>
 							            <a href='update.php?id=$id' class='expand'>+</a>
 							            <a class='close-overlay hidden'>x</a>
@@ -244,22 +230,6 @@ a.expand {
 						</div>
 					</div>";
 				    
-          	// echo "<div class='row>
-          	// 		<div class='offset-md-2 col-md-8>
-          	// 			<div class='row col-sm-4'>
-          	// 				<a href='update.php?id=$id'>
-	          // 					<img src='images/$image' />
-	          // 				</a>
-	          // 			</div>
-	          // 		</div>
-	          // 	</div";
-
-     //      		echo "<div class='container'>
-					// 	  <img src='images/$image' class='image' style='width:100%'>
-					// 	  <div class='middle'>
-					// 	    <div class='text'>$name</div>
-					// 	  </div>
-					// </div>";
 
       		}
       	}

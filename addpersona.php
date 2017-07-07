@@ -17,24 +17,11 @@ require_once 'connection.php';
 		if ($result)
 			header('location: fool.php');
 
-}
+		}
 
 		if (isset($_POST['cancel'])) {
 			header('location: fool.php');
 		}
-
-
-	 //    if (isset($_POST['show_item'])) {
-	 //    	$sql = "SELECT * FROM earphones";
-	 //    	$show = mysqli_query($connect,$sql);
-	    	
-	 //    	if (mysqli_num_rows($show) > 0) {
-		// 		while ($row = mysqli_fetch_assoc($show)) { 
-		// 			extract($row);
-		// 			echo $Name . ' ' . "<img src=images/$Images width=100px><br>";
-		// 		}
-		// 	}
-		// }
 
 ?>
 
@@ -50,23 +37,53 @@ require_once 'connection.php';
     <!-- Latest compiled and minified CSS -->
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
 
-	<!-- Optional theme -->
-	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
-</head>
+	<style type="text/css">
+		body {
+		    background-image: url(images/confidant1.jpg);
+		    color: black;
+		    background-repeat: no-repeat;
+		    background-position: center center;
+		    background-attachment: fixed;
+		    background-size: cover;
+    	}
 
+    	h1 {
+    		color: white;
+    	}
+
+    	.addpersona {
+    		position: absolute;
+    		transform: translate(0,70%);
+    	}
+
+	</style>
+</head>
 
 <body>
 
-	<div class="container-fluid">
+	<div class="container-fluid addpersona">
 		<form id="register" action="" method="POST">
-			<fieldset style="width: 30%;">
-				<legend><h1>ADD ITEMS</h1></legend>
+			<fieldset>
+				<legend><h1>Register a new Persona</h1></legend>
 					<div class="form-group">
 						<input type="text" name="name" placeholder="Name">
 					</div>
-					<div class="form-group">
-						<input type="text" name="arcana" placeholder="Name of Arcana">
-					</div>
+
+					<select name="arcana" class="form-control">
+						<option value="pick">--Select Arcana--</option>
+						<?php
+							require('connection.php');
+
+							$sql = mysqli_query($connect, "SELECT * FROM arcana");
+							$row = mysqli_num_rows($sql);
+							while ($row = mysqli_fetch_array($sql)){
+							echo "<option value='". $row['arcanaName'] ."'>" .$row['arcanaName'] ."</option>" ;
+							}
+						?>
+					</select> <!--dropdown list taken from database-->
+
+					<br>
+
 					<div class="form-group">
 						<textarea class="form-control" rows="4" name="description" placeholder="Description"></textarea>
 					</div>
@@ -79,15 +96,10 @@ require_once 'connection.php';
 					<div class="form-group">
 						<input class="btn btn-danger" class="btn btn-default" type="submit" name="cancel" value="Cancel">
 					</div>
-<!-- 					<div class="form-group">
-						<input class="btn btn-success" class="btn btn-default" type="submit" name="show_item" value="Show Item">
-					</div>	 -->
 			</fieldset>
 		</form>	
+
 	</div>
-
-
-
 
 	<script src="jquery-3.2.1.min.js"></script>
 

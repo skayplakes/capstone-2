@@ -36,19 +36,14 @@
 
 		}
 
-		html { 
-		  /*background: url("images/background.png") no-repeat center center fixed; */
-		  
-		}
-/*		img {
-			width: 200px;
-			height: 200px;
-		}
-
-*/		
 		h1 {
 			color: black;
 			font-family: 'Permanent Marker', cursive;
+		}
+
+		.title {
+			color: white;
+			margin-left: 20px;
 		}
 
 	</style>
@@ -62,7 +57,6 @@
 
 <?php
 
-	echo "<div class='bg'></div>";
 
 	require_once('connection.php');
 	$sql = "SELECT * FROM persona";
@@ -70,7 +64,9 @@
 	$show = mysqli_query($connect,$sql);
 
     	if (mysqli_num_rows($show) > 0) {
-    	
+
+    		echo "<h1 class='title'>All personas</h1>";
+    				
     	while ($row = mysqli_fetch_assoc($show)) { 
           extract($row);
           	echo "

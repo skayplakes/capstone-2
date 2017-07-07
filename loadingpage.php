@@ -24,26 +24,24 @@
     		background-color: red;
     	}
 
+    	.imagenavbar {
+    		position: absolute;
+    		transform: translate(10%, 50%);
+    	}
+
     </style>
 </head>
 <body>
 
-	<div class="container">
+	<div class="container imagenavbar">
 		<div class="row row-centered">
 			<div class="col-md-6">
-				<a href="arcanas.php"><img src="images/tarotedit.png" class="img-responsive"></a>
+				<a href="arcanas.php"><img src="images/tarotfinal.png" class="img-responsive arcanas"></a>
 			</div>
 			<div class="col-md-6">
-				<a href="#"><img src="images/personabuttonedit.png" class="img-responsive"></a>
+				<a href="fool.php"><img src="images/personabutton.png" class="img-responsive personas"></a>
 			</div>
 
-
-			<!-- <div class="col-xs-6">
-				<img src="images/tarotedit.png" class="img-responsive">
-			</div>
-			<div class="col-xs-6">
-				<img src="images/personabuttonedit.png" class="img-responsive"> -->
-			<!-- </div> -->
 		</div>
 	</div>
 

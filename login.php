@@ -78,6 +78,7 @@
 
 
 <?php
+
 session_start();
 
   if (isset($_POST['register'])) {
@@ -116,7 +117,7 @@ session_start();
 
         if ($sql == true) {
           echo "<script type='text/javascript'>alert('Login successful!');
-          window.location.href='arcanas.php';
+          window.location.href='loadingpage.php';
           </script>"; /*to generate an alert box and to redirect if successful*/
           
         } 

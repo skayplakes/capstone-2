@@ -10,8 +10,26 @@
 	<!-- Latest compiled and minified CSS -->
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
 
-	<!-- Optional theme -->
-	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+	<style type="text/css">
+		body {
+			background-image: url(images/igor2.jpg);
+			background-repeat: no-repeat;
+			background-position: center center;
+			background-attachment: fixed;
+			background-size: cover;
+			color: white;
+		}
+
+		.deletetable {
+			border: 1px solid black;
+			margin: 10px;
+			background-color: black;
+			opacity: 0.7;
+			width: 50%;
+
+		}
+
+	</style>
 
 </head>
 <body>
@@ -32,26 +50,28 @@ require_once('connection.php');
 		}
 
 		echo "
-			<div class='container-fluid'>	
+			<div class='container-fluid deletetable'>	
 				<div class='row'>
 					<div class='col-xs-4'>
 						<div class='item_image'>
-							<img src=images/$image width='200px'>
+							<img src=images/$image width='200px' class='img-responsive'>
 						</div>
 					</div>
-					<div class='col-xs-8'>
+					<div class='col-xs-8 personatext'>
 						<h3>$name</h3>
 						<h5>$arcanaName</h5>
 						<p>$description</p>
+
+						<h2><p>Are you sure you want to forget this Persona?</p></h2>
+
+						<form method='post' action=''>
+							<button class='btn btn-danger' type='submit' name='yes'>YES</button>
+							<button class='btn btn-default' type='submit' name='no'>NO</button>
+						</form>
 					</div>
 				</div>
 
-				<h2><p>Are you sure you want to delete this item?</p></h2>
-
-				<form method='post' action=''>
-					<button class='btn btn-danger' type='submit' name='yes'>YES</button>
-					<button class='btn btn-default' type='submit' name='no'>NO</button>
-				</form>
+				
 			</div>";
 
 		if (isset($_POST['yes'])) {
@@ -66,7 +86,7 @@ require_once('connection.php');
 		}
 
 		if (isset($_POST['no'])) {
-			header('location: new.php');
+			header('location: fool.php');
 		}
 
 	}

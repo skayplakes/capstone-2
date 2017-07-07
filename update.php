@@ -18,10 +18,6 @@
 	<link href="https://fonts.googleapis.com/css?family=Permanent+Marker" rel="stylesheet">
 
 	<style type="text/css">
-		img {
-			float: left;
-		}
-
 		body, html {
 			background-image: url(images/asd.jpg);
 			background-repeat: no-repeat;
@@ -51,20 +47,15 @@
 		  margin-bottom: 5px;
 		  width: 25%;
 		  overflow: hidden;
-		}
-
-		.logobutton {
-			/*transform: translate(0%,40%);*/
+		  top: 275px;
 		}
 
 		.buttonimage {
 			color: white;
 			font-family: 'Permanent Marker', cursive;
-			width: 16%;
-		}
-
-		.delete {
-			display: none;
+			width: 16%; /*clickable area of description*/
+			position: fixed;
+			top: 400px;
 		}
 
 	</style>
@@ -110,9 +101,13 @@ $sql = "SELECT * FROM persona WHERE id='$arcanaId'";
 					        </div>
 
 					        <div class='modal-footer'>
-					        <a href='edit.php?id=$id'><button class='btn btn-default btn-md'>Edit</button></a>
-					        <a href='delete.php?id=$id'><button class='btn btn-danger btn-md delete'>Delete</button></a>
+					        <a href='edit.php?id=$id'><button class='btn btn-default btn-md'>Edit</button></a>";
+					        
+							if ($_SESSION['role'] == 'admin') {
+						    	echo "<a href='delete.php?id=$id'><button class='btn btn-danger btn-md delete'>Delete</button></a>";
+						    } //to make delete button appear if role=admin
 
+						echo "
 					          <button type='button' class='btn btn-default' data-dismiss='modal'>Close</button>
 					        </div>
 					      </div>
@@ -122,6 +117,29 @@ $sql = "SELECT * FROM persona WHERE id='$arcanaId'";
 					  ";
            }
         }
+
+?>
+
+<?php
+	// require('connection.php');
+
+	// $sql = "SELECT * FROM persona_stats WHERE id='3'";
+
+	// $show = mysqli_query($connect,$sql);
+
+	// if (mysqli_num_rows($show) > 0) {
+
+	// 	while ($row = mysqli_fetch_assoc($show)) {
+ //            extract($row);
+
+ //            echo $strongAgainst;
+
+            
+
+ //        }
+	// }
+
+
 
 ?>
 
