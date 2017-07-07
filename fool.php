@@ -46,6 +46,12 @@
 			margin-left: 20px;
 		}
 
+		.back {
+		    position:fixed;
+		    bottom:0;
+		    right:0;
+		}
+
 	</style>
 
 	
@@ -88,6 +94,10 @@
 
 
 ?>
+
+<a href="loadingpage.php" class="back">
+    <img src="images/back.png" />
+</a>
 
 
 

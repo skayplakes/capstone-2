@@ -26,7 +26,7 @@
 
     	.imagenavbar {
     		position: absolute;
-    		transform: translate(10%, 50%);
+    		transform: translate(7%, 45%);
     	}
 
     </style>

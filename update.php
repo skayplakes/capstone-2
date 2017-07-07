@@ -39,6 +39,9 @@
 		.modal-title {
 			color: black;
 			text-align: center;
+			font-family: 'Permanent Marker', cursive;
+			font-size: 3em;
+
 		}
   
   		.personaimage {
@@ -78,6 +81,12 @@
 		}
 		.table tr {
 			text-align: center;
+		} 
+
+		.back {
+		    position:fixed;
+		    bottom:0;
+		    right:0;
 		}
 
 
@@ -169,9 +178,9 @@ $sql = "SELECT * FROM persona WHERE id='$arcanaId'";
 								        		</tr>
 								        	</tbody>
 						        		<tr>
-						        			<th>Primary Skill</th>
-						        			<th>Description</th>
-						        			<th>Damage</th>
+						        			<th class='warning'>Primary Skill</th>
+						        			<th class='success'>Description</th>
+						        			<th class='danger'>Damage</th>
 						        		</tr>
 								        	<tbody>
 								        		<tr>
@@ -181,9 +190,9 @@ $sql = "SELECT * FROM persona WHERE id='$arcanaId'";
 								        		</tr>
 								        	</tbody>
 						        		<tr>
-						        			<th>Secondary Skill</th>
-						        			<th>Description</th>
-						        			<th>Damage</th>
+						        			<th class='warning'>Secondary Skill</th>
+						        			<th class='success'>Description</th>
+						        			<th class='danger'>Damage</th>
 						        		</tr>
 								        	<tbody>
 								        		<tr>
@@ -204,7 +213,7 @@ $sql = "SELECT * FROM persona WHERE id='$arcanaId'";
 							if ($_SESSION['role'] == 'admin') {
 						    	echo "<a href='delete.php?id=$id'><button class='btn btn-danger btn-md delete'>Delete</button></a>";
 						    } //to make delete button appear if role=admin";
-						    
+
 					echo "
 					          <button type='button' class='btn btn-default' data-dismiss='modal'>Close</button>
 					        </div>
@@ -214,9 +223,11 @@ $sql = "SELECT * FROM persona WHERE id='$arcanaId'";
 					</div>";
            }
         }
-
 ?>
 
+<a href="fool.php" class="back">
+    <img src="images/back.png" />
+</a>
 
 	<!-- Latest compiled and minified JavaScript -->
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
