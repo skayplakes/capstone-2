@@ -54,9 +54,33 @@
 			color: white;
 			font-family: 'Permanent Marker', cursive;
 			width: 16%; /*clickable area of description*/
-			position: fixed;
+			position: absolute;
 			top: 400px;
+			margin-left: 30px;
 		}
+
+
+
+
+		.statsbutton {
+			color: white;
+			margin-left: 30px;
+			top: 475px;
+			position: absolute;
+		} /*stats button properties*/
+
+
+		.table th {
+			text-align: center;
+		}
+		.table td {
+			text-align: center;
+		}
+		.table tr {
+			text-align: center;
+		}
+
+
 
 	</style>
 </head>
@@ -84,7 +108,7 @@ $sql = "SELECT * FROM persona WHERE id='$arcanaId'";
 	            	<img class='personaimage img-responsive' src='images/$image'>
             	</div>";
             echo "
-            	<div class='container'>
+            	<div class='container-fluid'>
             		<a href='#'><h1 class='buttonimage' data-toggle='modal' data-target='#myModal'>Description</h1></a>
             	</div>
             		<div class='modal fade' id='myModal' role='dialog'>
@@ -113,35 +137,86 @@ $sql = "SELECT * FROM persona WHERE id='$arcanaId'";
 					      </div>
 					      
 					    </div>
-					  </div>
-					  ";
+					</div>";
+					  
+
+			echo "
+				<div class='container-fluid'>  
+					<a href='#'><h1 class='statsbutton' data-toggle='modal' data-target='#stats'>Stats</h1></a>
+            	</div>
+            		<div class='modal fade' id='stats' role='dialog'>
+					    <div class='modal-dialog'>
+					    
+					      <!-- Modal content-->
+					      <div class='modal-content'>
+					        <div class='modal-header'>
+					          <button type='button' class='close' data-dismiss='modal'>&times;</button>
+					          <h4 class='modal-title'>Stats</h4>
+					        </div>
+					        <div class='modal-body'>
+						        <table class='table table-bordered table-condensed'>
+						        	<thead>
+						        		<tr class>
+						        			<th class='warning'>HP</th>
+						        			<th class='success'>Resists</th>
+						        			<th class='danger'>Weakness</th>
+						        		</tr>
+								        	<tbody>
+								        		<tr>
+								        			<td>$HP</td>
+								        			<td>$strongAgainst</td>
+								        			<td>$weakAgainst</td>
+								        		</tr>
+								        	</tbody>
+						        		<tr>
+						        			<th>Primary Skill</th>
+						        			<th>Description</th>
+						        			<th>Damage</th>
+						        		</tr>
+								        	<tbody>
+								        		<tr>
+								        			<td>$primarySkill</td>
+								        			<td>$primaryDescription</td>
+								        			<td>$primaryDamage</td>
+								        		</tr>
+								        	</tbody>
+						        		<tr>
+						        			<th>Secondary Skill</th>
+						        			<th>Description</th>
+						        			<th>Damage</th>
+						        		</tr>
+								        	<tbody>
+								        		<tr>
+								        			<td>$secondarySkill</td>
+								        			<td>$secondaryDescription</td>
+								        			<td>$secondaryDamage</td>
+								        		</tr>
+								        	</tbody>
+						        	</thead>
+
+									  
+								</table>
+					        </div>
+
+					        <div class='modal-footer'>
+					        <a href='edit.php?id=$id'><button class='btn btn-default btn-md'>Edit</button></a>";
+					        
+							if ($_SESSION['role'] == 'admin') {
+						    	echo "<a href='delete.php?id=$id'><button class='btn btn-danger btn-md delete'>Delete</button></a>";
+						    } //to make delete button appear if role=admin";
+						    
+					echo "
+					          <button type='button' class='btn btn-default' data-dismiss='modal'>Close</button>
+					        </div>
+					      </div>
+					      
+					    </div>
+					</div>";
            }
         }
 
 ?>
 
-<?php
-	// require('connection.php');
-
-	// $sql = "SELECT * FROM persona_stats WHERE id='3'";
-
-	// $show = mysqli_query($connect,$sql);
-
-	// if (mysqli_num_rows($show) > 0) {
-
-	// 	while ($row = mysqli_fetch_assoc($show)) {
- //            extract($row);
-
- //            echo $strongAgainst;
-
-            
-
- //        }
-	// }
-
-
-
-?>
 
 	<!-- Latest compiled and minified JavaScript -->
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
