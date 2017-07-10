@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title></title>
+	<title>Edit Stats</title>
 
 	<meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -34,7 +34,7 @@ require_once('connection.php');
 		}
 
 			echo "
-				<form action='' method='POST' class='edit_form'>
+				<form action='' method='POST' class='edit_form' style='width: 50%;'>
 					<table class='table table-bordered table-condensed stats-persona table-responsive'>
 			        	<thead>
 			        		<tr class>
@@ -116,6 +116,7 @@ require_once('connection.php');
 
 ?>
 
+<?php require_once('partials/footer.php'); ?>
 
 
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>

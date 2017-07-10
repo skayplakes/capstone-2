@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title></title>
+	<title>P5 Compendium</title>
 
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -36,7 +36,6 @@
 
   <div class="container">
     <div class="row">
-      <!-- <img src="images/compendiumedit.png" class="img-center center-block img-responsive"> -->
       <h1 class="bannerimage">Compendium</h1>
     </div>
   </div>
@@ -98,7 +97,6 @@ session_start();
 
 
 ?>
-
 
   <div class="form">
       <ul class="tab-group">
@@ -191,6 +189,8 @@ session_start();
         
       </div><!-- tab-content -->
   </div>
+  
+
 
 <!-- Latest compiled and minified JavaScript -->
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>

@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title></title>
+	<title>Arcanas</title>
 
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -39,7 +39,7 @@ require_once('connection.php');
                         <img class='img-responsive' src='images/$arcanaImage'>
                     </div>
                     <div class='row col-sm-8'>
-                        <h2>$arcanaName</h2>
+                        <h2 class='arcananame'>$arcanaName</h2>
                         <button type='button' class='btn btn-default' data-toggle='collapse' data-target='#description".$id."'>Click to show description</button>".'<br>'."
                             <p id='description".$id."' class='collapse'>$arcanaDescription</p>
 
@@ -58,6 +58,8 @@ require_once('connection.php');
 <a href="loadingpage.php" class="backbutton">
     <img src="images/back.png" class='img-responsive' />
 </a>
+
+<?php require_once('partials/footer.php'); ?>
   
 
     

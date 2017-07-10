@@ -1,7 +1,27 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title></title>
+
+<?php
+
+require('connection.php');
+
+$arcanaId = $_GET['id'];
+
+$sql = "SELECT * FROM persona where id='$arcanaId'";
+	
+	$show = mysqli_query($connect,$sql);
+
+	 if (mysqli_num_rows($show) > 0) {
+
+        	while ($row = mysqli_fetch_assoc($show)) {
+            extract($row);
+
+            echo "<title>$name</title>";
+        }
+    }
+
+?>
 
 	<meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -156,6 +176,8 @@ $sql = "SELECT * FROM persona WHERE id='$arcanaId'";
 <a href="loadingpage.php" class="back">
     <img src="images/back.png" />
 </a>
+
+<?php require_once('partials/footer.php'); ?>	
 
 	<!-- Latest compiled and minified JavaScript -->
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>

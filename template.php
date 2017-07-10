@@ -27,7 +27,7 @@
 
 
 
-<?php require_once('partials/footer.php'); ?>
+
 
 
 	<!-- Latest compiled JavaScript -->

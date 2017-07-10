@@ -1,14 +1,7 @@
-<?php
-
-
-?>
-
-
-
 <!DOCTYPE html>
 <html>
 <head>
-	<title></title>
+	<title>Main Menu</title>
 
 	 <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -36,6 +29,8 @@
 
 		</div>
 	</div>
+
+<?php require_once('partials/footer.php'); ?>
 
 
 

@@ -52,10 +52,9 @@
 
       		}
       	}
-
-		
-
 ?>
+
+<?php require_once('partials/footer.php'); ?>
 	
 	<script src="modernizr.js"></script>
 

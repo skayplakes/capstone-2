@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title></title>
+	<title>Delete Persona</title>
 
 	<meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -64,7 +64,7 @@ require_once('connection.php');
 
 			mysqli_query($connect,$sql);
 
-			header('location: new.php');
+			header('location: fool.php');
 		}
 
 		if (isset($_POST['no'])) {
@@ -74,6 +74,8 @@ require_once('connection.php');
 	}
 
 ?>
+
+<?php require_once('partials/footer.php'); ?>
 
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
 	<!-- Latest compiled and minified JavaScript -->
