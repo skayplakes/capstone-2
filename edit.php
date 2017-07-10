@@ -13,34 +13,11 @@
 
 	<link href="https://fonts.googleapis.com/css?family=Permanent+Marker" rel="stylesheet">
 
-	<style type="text/css">
-		body {
-			background-image: url(images/igor.jpg);
-			background-repeat: no-repeat;
-			background-position: center center;
-			background-attachment: fixed;
-			background-size: cover;
-			color: black;
-		}
+	<link rel="stylesheet" type="text/css" href="styles.css">
 
-		h1 {
-			color: black;
-		}
-
-		.table-responsive {
-			background-color: white;
-			opacity: 0.8;
-			float: left;
-			width: 50%;
-			padding: 10px;
-		}
-
-		.table-responsive h1 {
-			font-family: 'Permanent Marker', cursive;
-		}
-	</style>
 </head>
-<body>
+
+<body class="edit">
 
 <?php
 
@@ -76,7 +53,6 @@ require_once('connection.php');
 								</div>
 								<div class='form-group'>
 									<button class='btn btn-success' class='btn btn-default' type='submit' name='update'>Update</button>
-									<button class='btn btn-default' type='submit' name='cancel'>Cancel</button>
 								</div>
 						</fieldset>
 					</form>
@@ -93,7 +69,7 @@ require_once('connection.php');
 
 			mysqli_query($connect,$sql);
 
-			header('location: update.php');
+			header('location: fool.php');
 		}
 
 		if (isset($_POST['cancel'])) {

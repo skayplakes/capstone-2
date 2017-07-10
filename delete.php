@@ -10,29 +10,11 @@
 	<!-- Latest compiled and minified CSS -->
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
 
-	<style type="text/css">
-		body {
-			background-image: url(images/igor2.jpg);
-			background-repeat: no-repeat;
-			background-position: center center;
-			background-attachment: fixed;
-			background-size: cover;
-			color: white;
-		}
-
-		.deletetable {
-			border: 1px solid black;
-			margin: 10px;
-			background-color: black;
-			opacity: 0.7;
-			width: 50%;
-
-		}
-
-	</style>
+	<link rel="stylesheet" type="text/css" href="styles.css">
 
 </head>
-<body>
+
+<body class="delete">
 
 <?php
 

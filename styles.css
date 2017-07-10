@@ -1,0 +1,413 @@
+/* ============================================================
+  GLOBAL
+============================================================ */
+.effects {
+  padding-left: 15px;
+}
+.effects .img {
+  position: relative;
+  float: left;
+  margin-bottom: 5px;
+  width: 25%;
+  overflow: hidden;
+}
+.effects .img:nth-child(n) {
+  margin-right: 5px;
+}
+.effects .img:first-child {
+  margin-left: -15px;
+}
+.effects .img:last-child {
+  margin-right: 0;
+}
+.effects .img img {
+  display: block;
+  margin: 0;
+  padding: 0;
+  max-width: 100%;
+  height: auto;
+}
+
+.overlay {
+  display: block;
+  position: absolute;
+  z-index: 20;
+  background: rgba(0, 0, 0, 0.8);
+  overflow: hidden;
+  transition: all 0.5s;
+  opacity: 0.5; /*opacity of transition overlay*/
+}
+
+a.close-overlay {
+  display: block;
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: 100;
+  width: 45px;
+  height: 45px;
+  font-size: 20px;
+  font-weight: 700;
+  color: #fff;
+  line-height: 45px;
+  text-align: center;
+  background-color: #000;
+  cursor: pointer;
+}
+a.close-overlay.hidden {
+  display: none;
+}
+
+a.expand {
+  display: block;
+  position: absolute;
+  z-index: 100;
+  width: 60px;
+  height: 60px;
+  border: solid 5px #fff;
+  text-align: center;
+  color: #fff;
+  line-height: 50px;
+  font-weight: 700;
+  font-size: 30px;
+  border-radius: 30px;
+}
+
+h1 {
+  font-family: 'Permanent Marker', cursive;
+  color: black;
+}
+
+h2 {
+    color: white;
+    text-align: center;
+    font-family: 'Permanent Marker', cursive;
+}
+
+/* ============================================================
+  LOGIN PAGE
+============================================================ */
+
+ .login {
+    background-image: url(images/city3.gif);
+    color: black;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-attachment: fixed;
+    background-size: cover;
+
+}
+
+.bannerimage {
+  font-size: 6em;
+  color: white;
+  word-wrap: break-word;
+   -webkit-hyphens: auto;
+   -moz-hyphens: auto;
+   -ms-hyphens: auto;
+   -o-hyphens: auto;
+   hyphens: auto;
+}
+
+.logintext {
+	color: white;
+}
+
+/* ============================================================
+  LOADING PAGE
+============================================================ */
+.loadingpage {
+	background-color: red;
+}
+
+.imagenavbar {
+	position: absolute;
+	transform: translate(7%, 45%);
+}
+
+/* ============================================================
+  ALL PERSONA PAGE
+============================================================ */
+
+.allpersonas {
+	background-image: url(images/list.jpg);
+	background-repeat:no-repeat;
+	background-position: center center;
+	background-attachment: fixed;
+	background-size: cover;
+}
+
+.title {
+	color: white;
+	margin-left: 20px;
+}
+
+.backbutton {
+    position:fixed;
+    bottom:0;
+    right:0;
+}
+
+.addbutton {
+	padding-left: 10px;
+}
+
+
+/* ============================================================
+  ARCANA PAGE
+============================================================ */
+
+.gradientcolor {
+    background-image: -webkit-linear-gradient(40deg, red 50%, black 50%);
+    background-repeat: no-repeat;
+	background-position: center center;
+	background-attachment: fixed;
+	background-size: cover; 
+    /*half-red, half-black background color*/
+}
+
+span, p {
+    color: white;
+}
+
+#description {
+    display: none;
+}
+
+/* ============================================================
+  CATEGORY PAGE
+============================================================ */
+
+
+/* ============================================================
+  EFFECT 5 - ICON BORDER ANIMATE
+============================================================ */
+#effect-5 .overlay {
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  opacity: 0;
+}
+#effect-5 .overlay a.expand {
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+  width: 100%;
+  height: 100%;
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0;
+  -ms-border-radius: 0;
+  -o-border-radius: 0;
+  border-radius: 0;
+  -webkit-transition: all 0.5s;
+  -moz-transition: all 0.5s;
+  -o-transition: all 0.5s;
+  transition: all 0.5s;
+}
+#effect-5 .img.hover .overlay {
+  opacity: 1;
+}
+#effect-5 .img.hover .overlay a.expand {
+  width: 60px;
+  height: 60px;
+  -webkit-border-radius: 30px;
+  -moz-border-radius: 30px;
+  -ms-border-radius: 30px;
+  -o-border-radius: 30px;
+  border-radius: 30px;
+}
+
+.category {
+    background-image: url(images/qwe.jpg);
+    color: black;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-attachment: fixed;
+    background-size: cover;
+
+}
+
+/* ============================================================
+  UPDATE PAGE
+============================================================ */
+
+.update {
+	background-image: url(images/asd.jpg);
+	background-repeat: no-repeat;
+	background-position: center center;
+	background-attachment: fixed;
+	background-size: cover;
+
+}
+
+.modal-body {
+	color: black;
+}
+
+.modal-title {
+	color: black;
+	text-align: center;
+	font-family: 'Permanent Marker', cursive;
+	font-size: 3em;
+
+}
+
+.modaltext {
+	color: black;
+}
+
+	.personaimage {
+  position: relative;
+  float: right;
+  margin-bottom: 5px;
+  width: 25%;
+  overflow: hidden;
+  top: 275px;
+}
+
+.buttonimage {
+	color: white;
+	font-family: 'Permanent Marker', cursive;
+	width: 16%; /*clickable area of description*/
+	position: absolute;
+	top: 400px;
+	margin-left: 30px;
+}
+
+.statsbutton {
+	color: white;
+	margin-left: 30px;
+	top: 475px;
+	position: absolute;
+} /*stats button properties*/
+
+
+.table-persona th {
+	text-align: center;
+}
+.table-persona td {
+	text-align: center;
+}
+.table-persona tr {
+	text-align: center;
+} 
+
+.back {
+    position:fixed;
+    bottom:0;
+    right:0;
+}
+
+/* ============================================================
+  EDIT PERSONA PAGE
+============================================================ */
+
+.edit {
+	background-image: url(images/igor.jpg);
+	background-repeat: no-repeat;
+	background-position: center center;
+	background-attachment: fixed;
+	background-size: cover;
+	color: black;
+}
+
+.table-responsive {
+	background-color: white;
+	opacity: 0.8;
+	float: left;
+	width: 50%;
+	padding: 10px;
+	top: 275px;
+}
+
+.table-responsive h1 {
+	font-family: 'Permanent Marker', cursive;
+}
+
+/* ============================================================
+  DELETE PERSONA PAGE
+============================================================ */
+
+.delete {
+	background-image: url(images/igor2.jpg);
+	background-repeat: no-repeat;
+	background-position: center center;
+	background-attachment: fixed;
+	background-size: cover;
+	color: white;
+}
+
+.deletetable {
+	border: 1px solid black;
+	margin: 10px;
+	background-color: black;
+	opacity: 0.7;
+	width: 50%;
+
+}
+
+/* ============================================================
+  EDIT STATS PAGE
+============================================================ */
+
+.edit-stats {
+	background-image: url(images/edit.jpg);
+	background-repeat: no-repeat;
+	background-position: center center;
+	background-attachment: fixed;
+	background-size: cover;
+	/*color: white;*/
+
+}
+
+.stats-persona {
+	background-color: white;
+	opacity: 0.9;
+	float: left;
+	width: 60%;
+	padding-bottom: 20px;
+	margin: 10px;
+/*	position: absolute;
+	transform: translate(0,60%);*/
+}
+
+
+/* ============================================================
+  FOOTER PAGE
+============================================================ */
+
+footer {
+    position: fixed;
+    height: 25px;
+    bottom: 0;
+    width: 100%;
+    background-color: grey;
+    text-align: center;
+}
+
+/* ============================================================
+ ADD PERSONA PAGE
+============================================================ */
+
+.addpersona {
+    background-image: url(images/confidant1.jpg);
+    color: black;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-attachment: fixed;
+    background-size: cover;
+}
+
+h1.add {
+	color: white;
+}
+
+.addpersona {
+	position: absolute;
+	transform: translate(0,70%);
+}
+
+

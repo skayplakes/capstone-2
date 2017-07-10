@@ -19,19 +19,11 @@
 
     <link href="https://fonts.googleapis.com/css?family=Permanent+Marker" rel="stylesheet">
 
-    <style type="text/css">
-    	body {
-    		background-color: red;
-    	}
+    <link rel="stylesheet" type="text/css" href="styles.css">
 
-    	.imagenavbar {
-    		position: absolute;
-    		transform: translate(7%, 45%);
-    	}
 
-    </style>
 </head>
-<body>
+<body class="loadingpage">
 
 	<div class="container imagenavbar">
 		<div class="row row-centered">
@@ -44,6 +36,8 @@
 
 		</div>
 	</div>
+
+
 
 	<!-- Latest compiled and minified JavaScript -->
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>

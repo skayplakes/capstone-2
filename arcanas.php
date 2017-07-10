@@ -15,32 +15,10 @@
 
     <link href="https://fonts.googleapis.com/css?family=Permanent+Marker" rel="stylesheet">
 
-    <style type="text/css">
-        body {
-            /*background-color: black;*/
-            background-image: -webkit-linear-gradient(40deg, red 50%, black 50%); 
-            /*half-red, half-black background color*/
-        }
-
-        h2 {
-            color: white;
-            text-align: center;
-            font-family: 'Permanent Marker', cursive;
-        }
-
-        span, p {
-            color: white;
-        }
-
-        #description {
-            display: none;
-        }
-
-    </style>
-
+    <link rel="stylesheet" type="text/css" href="styles.css">
 
 </head>
-<body>
+<body class="gradientcolor">
 
 <?php
 
@@ -76,8 +54,12 @@ require_once('connection.php');
     }
 
 ?>
+
+<a href="loadingpage.php" class="backbutton">
+    <img src="images/back.png" class='img-responsive' />
+</a>
   
-</div>
+
     
     <!-- Latest compiled and minified JavaScript -->
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>

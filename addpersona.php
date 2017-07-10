@@ -1,3 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+
+	<meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Latest compiled and minified CSS -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+	<link rel="stylesheet" type="text/css" href="styles.css">
+
+
+</head>
+
+<body class="addpersona">
+
 <?php
 
 require_once 'connection.php';
@@ -25,46 +44,10 @@ require_once 'connection.php';
 
 ?>
 
-<!DOCTYPE html>
-<html>
-<head>
-	<title></title>
-
-	<meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-
-    <!-- Latest compiled and minified CSS -->
-	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-
-	<style type="text/css">
-		body {
-		    background-image: url(images/confidant1.jpg);
-		    color: black;
-		    background-repeat: no-repeat;
-		    background-position: center center;
-		    background-attachment: fixed;
-		    background-size: cover;
-    	}
-
-    	h1 {
-    		color: white;
-    	}
-
-    	.addpersona {
-    		position: absolute;
-    		transform: translate(0,70%);
-    	}
-
-	</style>
-</head>
-
-<body>
-
-	<div class="container-fluid addpersona">
+	<div class="container-fluid">
 		<form id="register" action="" method="POST">
 			<fieldset>
-				<legend><h1>Register a new Persona</h1></legend>
+				<legend><h1 class="add">Register a new Persona</h1></legend>
 					<div class="form-group">
 						<input type="text" name="name" placeholder="Name">
 					</div>

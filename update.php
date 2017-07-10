@@ -17,83 +17,11 @@
 
 	<link href="https://fonts.googleapis.com/css?family=Permanent+Marker" rel="stylesheet">
 
-	<style type="text/css">
-		body, html {
-			background-image: url(images/asd.jpg);
-			background-repeat: no-repeat;
-			background-position: center center;
-			background-attachment: fixed;
-			background-size: cover;
-
-		}
-	
-		h1 {
-			color: black;
-			font-family: 'Permanent Marker', cursive;
-		}
-
-		.modal-body {
-			color: black;
-		}
-
-		.modal-title {
-			color: black;
-			text-align: center;
-			font-family: 'Permanent Marker', cursive;
-			font-size: 3em;
-
-		}
-  
-  		.personaimage {
-		  position: relative;
-		  float: right;
-		  margin-bottom: 5px;
-		  width: 25%;
-		  overflow: hidden;
-		  top: 275px;
-		}
-
-		.buttonimage {
-			color: white;
-			font-family: 'Permanent Marker', cursive;
-			width: 16%; /*clickable area of description*/
-			position: absolute;
-			top: 400px;
-			margin-left: 30px;
-		}
+	<link rel="stylesheet" type="text/css" href="styles.css">
 
 
-
-
-		.statsbutton {
-			color: white;
-			margin-left: 30px;
-			top: 475px;
-			position: absolute;
-		} /*stats button properties*/
-
-
-		.table th {
-			text-align: center;
-		}
-		.table td {
-			text-align: center;
-		}
-		.table tr {
-			text-align: center;
-		} 
-
-		.back {
-		    position:fixed;
-		    bottom:0;
-		    right:0;
-		}
-
-
-
-	</style>
 </head>
-<body>
+<body class="update">
 
 <?php
 
@@ -130,7 +58,7 @@ $sql = "SELECT * FROM persona WHERE id='$arcanaId'";
 					          <h4 class='modal-title'>$name</h4>
 					        </div>
 					        <div class='modal-body'>
-					          <p>$description</p>
+					          <p class='modaltext'>$description</p>
 					        </div>
 
 					        <div class='modal-footer'>
@@ -163,7 +91,7 @@ $sql = "SELECT * FROM persona WHERE id='$arcanaId'";
 					          <h4 class='modal-title'>Stats</h4>
 					        </div>
 					        <div class='modal-body'>
-						        <table class='table table-bordered table-condensed'>
+						        <table class='table table-bordered table-condensed table-persona'>
 						        	<thead>
 						        		<tr class>
 						        			<th class='warning'>HP</th>
@@ -208,7 +136,7 @@ $sql = "SELECT * FROM persona WHERE id='$arcanaId'";
 					        </div>
 
 					        <div class='modal-footer'>
-					        <a href='edit.php?id=$id'><button class='btn btn-default btn-md'>Edit</button></a>";
+					        <a href='edit_stats.php?id=$id'><button class='btn btn-default btn-md'>Edit</button></a>";
 					        
 							if ($_SESSION['role'] == 'admin') {
 						    	echo "<a href='delete.php?id=$id'><button class='btn btn-danger btn-md delete'>Delete</button></a>";
@@ -225,7 +153,7 @@ $sql = "SELECT * FROM persona WHERE id='$arcanaId'";
         }
 ?>
 
-<a href="fool.php" class="back">
+<a href="loadingpage.php" class="back">
     <img src="images/back.png" />
 </a>
 

@@ -15,54 +15,13 @@
 
 	<link href="https://fonts.googleapis.com/css?family=Permanent+Marker" rel="stylesheet">
 
-
-
-
-
-
-	<style type="text/css">
-
-		body, html {
-			background-image: url(images/list.jpg);
-			background-repeat:no-repeat;
-			background-position: center center;
-			background-attachment: fixed;
-			background-size: cover;
-
-/*			background-size:cover;
-			background-position:center;*/ 
-
-			/*check this for responsiveness */
-
-		}
-
-		h1 {
-			color: black;
-			font-family: 'Permanent Marker', cursive;
-		}
-
-		.title {
-			color: white;
-			margin-left: 20px;
-		}
-
-		.back {
-		    position:fixed;
-		    bottom:0;
-		    right:0;
-		}
-
-	</style>
-
-	
-
+	<link rel="stylesheet" type="text/css" href="styles.css">
 
 
 </head>
-<body>
+<body class="allpersonas">
 
 <?php
-
 
 	require_once('connection.php');
 	$sql = "SELECT * FROM persona";
@@ -71,7 +30,19 @@
 
     	if (mysqli_num_rows($show) > 0) {
 
-    		echo "<h1 class='title'>All personas</h1>";
+    		echo "<h1 class='title'>All personas</h1>
+
+    		<div class='container-fluid'>
+    			<div class='row'>
+    				<div class='offset-md-2 col-md-8'>
+    					<div class='row col-sm-4'>
+				    		<a href='addpersona.php'>
+							    <img src='images/add.png' class='img-responsive addbutton' />
+							</a>
+						</div>
+					</div>
+				</div>
+			</div>";
     				
     	while ($row = mysqli_fetch_assoc($show)) { 
           extract($row);
@@ -91,17 +62,14 @@
       		}
       	}
 
-
-
 ?>
 
-<a href="loadingpage.php" class="back">
-    <img src="images/back.png" />
+
+
+
+<a href="loadingpage.php" class="backbutton">
+    <img src="images/back.png" class='img-responsive' />
 </a>
-
-
-
-	
 
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
 
