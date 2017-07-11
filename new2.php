@@ -1,7 +1,26 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title></title>
+
+<?php
+
+require('connection.php');
+
+$arcanaId = $_GET['category'];
+
+$sql = "SELECT * FROM persona WHERE arcanaName='$arcanaId'";
+
+$show = mysqli_query($connect,$sql);
+	if (mysqli_num_rows($show) > 0) {
+    	
+    	while ($row = mysqli_fetch_assoc($show)) { 
+          extract($row);
+
+          	echo "<title>$arcanaName</title>";
+          }
+    }
+
+?>
 
 	<meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -54,7 +73,12 @@
       	}
 ?>
 
-<?php require_once('partials/footer.php'); ?>
+<a href="loadingpage.php" class="backbutton">
+    <img src="images/back.png" class='img-responsive' />
+</a>
+
+<?php require('partials/footer.php'); ?>
+
 	
 	<script src="modernizr.js"></script>
 

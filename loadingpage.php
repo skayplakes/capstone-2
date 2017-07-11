@@ -18,11 +18,11 @@
 </head>
 <body class="loadingpage">
 
-	<div class="container welcomebanner">
+	<div class="container-fluid welcomebanner">
 		<h1>Welcome to the Wiki</h1>
 		<p>We're glad you're here! We're striving to be the best resource about the world of Persona on the net, so we cover all aspects of Atlus's smash hit. Whatever knowledge you have—whether it's about the anime, music, video games or movies—is welcome here. Just <a href="index.php">sign up</a> for a totally free account and start contributing today! If you run into problems, be sure to give one of our admins a shout! Oh, and don't forget to visit our guidelines and Manual of Style to get some tips on the best ways you can help us grow this database!</p>
 
-		<p>To start viewing the wiki, click on the images below to start exploring the content of the wiki. Enjoy!</p>
+		<p>To start, click on the images throughout the site to start exploring the content of the wiki. Enjoy!</p>
 	</div>
 
 	<div class="container imagenavbar">
@@ -38,7 +38,6 @@
 	</div>
 
 <?php require('partials/footer.php'); ?>
-
 
 
 	<!-- Latest compiled and minified JavaScript -->

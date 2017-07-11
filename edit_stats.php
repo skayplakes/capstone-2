@@ -34,58 +34,61 @@ require_once('connection.php');
 		}
 
 			echo "
-				<form action='' method='POST' class='edit_form' style='width: 50%;'>
-					<table class='table table-bordered table-condensed stats-persona table-responsive'>
-			        	<thead>
-			        		<tr class>
-			        			<th class='warning'>HP</th>
-			        			<th class='success'>Resists</th>
-			        			<th class='danger'>Weakness</th>
-			        		</tr>
-					        	<tbody>
-					        		<tr>
-					        			<td><input type='number' name='HP' placeholder='HP' value='$HP'></td>
-					        			<td><input type='text' name='strong' placeholder='Strong Against' value='$strongAgainst'></td>
-					        			<td><input type='text' name='weak' placeholder='Weak Against' value='$weakAgainst'></td>
-					        		</tr>
-					        	</tbody>
-			        		<tr>
-			        			<th class='warning'>Primary Skill</th>
-			        			<th class='success'>Description</th>
-			        			<th class='danger'>Damage</th>
-			        		</tr>
-					        	<tbody>
-					        		<tr>
-					        			<td><input type='text' name='primaryskill' placeholder='Primary Skill' value='$primarySkill'></td>
-					        			<td><input type='text' name='primarydescription' placeholder='Primary Description' value='$primaryDescription'></td>
-					        			<td><input type='number' name='primarydamage' placeholder='Primary Damage' value='$primaryDamage'></td>
-					        		</tr>
-					        	</tbody>
-			        		<tr>
-			        			<th class='warning'>Secondary Skill</th>
-			        			<th class='success'>Description</th>
-			        			<th class='danger'>Damage</th>
-			        		</tr>
-					        	<tbody>
-					        		<tr>
-					        			<td><input type='text' name='secondaryskill' placeholder='Secondary Skill' value='$secondarySkill'></td>
-					        			<td><input type='text' name='secondarydescription' placeholder='Secondary Description' value='$secondaryDescription'></td>
-					        			<td><input type='number' name='secondarydamage' placeholder='Secondary Damage' value='$secondaryDamage'></td>
-					        		</tr>
-					        	</tbody>
-			        	</thead>
+					<form action='' method='POST' class='edit_form'>
+					<fieldset style=width: 30%;'>
+							<h1 class='edit_stats'>EDIT PERSONA STATS</h1>
+					</fieldset>
+						<table class='table table-bordered table-condensed stats-persona table-responsive'>
+				        	<thead>
+				        		<tr class>
+				        			<th class='warning'>HP</th>
+				        			<th class='success'>Resists</th>
+				        			<th class='danger'>Weakness</th>
+				        		</tr>
+						        	<tbody>
+						        		<tr>
+						        			<td><input type='number' name='HP' placeholder='HP' value='$HP'></td>
+						        			<td><input type='text' name='strong' placeholder='Strong Against' value='$strongAgainst'></td>
+						        			<td><input type='text' name='weak' placeholder='Weak Against' value='$weakAgainst'></td>
+						        		</tr>
+						        	</tbody>
+				        		<tr>
+				        			<th class='warning'>Primary Skill</th>
+				        			<th class='success'>Description</th>
+				        			<th class='danger'>Damage</th>
+				        		</tr>
+						        	<tbody>
+						        		<tr>
+						        			<td><input type='text' name='primaryskill' placeholder='Primary Skill' value='$primarySkill'></td>
+						        			<td><input type='text' name='primarydescription' placeholder='Primary Description' value='$primaryDescription'></td>
+						        			<td><input type='number' name='primarydamage' placeholder='Primary Damage' value='$primaryDamage'></td>
+						        		</tr>
+						        	</tbody>
+				        		<tr>
+				        			<th class='warning'>Secondary Skill</th>
+				        			<th class='success'>Description</th>
+				        			<th class='danger'>Damage</th>
+				        		</tr>
+						        	<tbody>
+						        		<tr>
+						        			<td><input type='text' name='secondaryskill' placeholder='Secondary Skill' value='$secondarySkill'></td>
+						        			<td><input type='text' name='secondarydescription' placeholder='Secondary Description' value='$secondaryDescription'></td>
+						        			<td><input type='number' name='secondarydamage' placeholder='Secondary Damage' value='$secondaryDamage'></td>
+						        		</tr>
+						        	</tbody>
+				        	</thead>
+						</table>
 
 
-					</table>
+							<div class='form-group'>
+								<input class='btn btn-success' class='btn btn-default' type='submit' name='edit' value='Edit'>
+							</div>
 
-					<div class='form-group'>
-						<button class='btn btn-success' class='btn btn-default edit' type='submit' name='edit'>Edit</button>
-					</div>
+							<div class='form-group'>
+								<input class='btn btn-danger' class='btn btn-default' type='submit' name='cancel' value='Cancel'>
+							</div>
 
-					
-
-
-				</form>";
+					</form>";
 
 			if (isset($_POST['edit'])) {
 				$hp = $_POST['HP'];
@@ -109,11 +112,11 @@ require_once('connection.php');
 
 				header('location: fool.php');
 			}
-		
+
+			if (isset($_POST['cancel'])) {
+				header('location: fool.php');
+			}
 	}
-
-
-
 ?>
 
 <?php require_once('partials/footer.php'); ?>

@@ -173,11 +173,11 @@ $sql = "SELECT * FROM persona WHERE id='$arcanaId'";
         }
 ?>
 
-<a href="loadingpage.php" class="back">
-    <img src="images/back.png" />
+<a href="loadingpage.php" class="backbutton">
+    <img src="images/back.png" class='img-responsive'/>
 </a>
 
-<?php require_once('partials/footer.php'); ?>	
+<?php require('partials/footer.php'); ?>	
 
 	<!-- Latest compiled and minified JavaScript -->
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>

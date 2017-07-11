@@ -127,7 +127,7 @@ h2 {
 
 .imagenavbar {
 	position: absolute;
-	transform: translate(7%, 20%);
+	transform: translate(7%, 15%);
 }
 
 .arcanas {
@@ -158,6 +158,21 @@ h2 {
   box-shadow: 10px 10px 5px black;
 }
 
+.welcomebanner {
+	border: 1px solid black;
+	display: block;
+	color: white;
+	width: 50%;
+	margin-top: 20px;
+	background-color: black;
+}
+
+.welcomebanner h1 {
+	text-align: center;
+	color: white;
+}
+
+
 
 /* ============================================================
   ALL PERSONA PAGE
@@ -169,7 +184,7 @@ h2 {
 	background-position: center center;
 	background-attachment: fixed;
 	background-size: cover;
-	font-family: 'Permanent Marker', cursive;
+
 }
 
 .title {
@@ -179,7 +194,7 @@ h2 {
 
 .backbutton {
     position:fixed;
-    bottom:0;
+    bottom:60px;
     right:0;
     z-index: 9999;
 
@@ -376,6 +391,15 @@ span, p {
 	font-family: 'Permanent Marker', cursive;
 }
 
+.table-edit {
+	transform: translate(0, 50%);
+}
+
+.table-edit h1 {
+	text-align: center;
+}
+
+
 /* ============================================================
   DELETE PERSONA PAGE
 ============================================================ */
@@ -395,6 +419,11 @@ span, p {
 	background-color: black;
 	opacity: 0.7;
 	width: 50%;
+	transform: translate(0, 35%);
+}
+
+.deletetable h2 {
+	font-family: 'Permanent Marker', cursive;
 }
 
 /* ============================================================
@@ -411,12 +440,19 @@ span, p {
 
 .stats-persona {
 	background-color: white;
-	opacity: 0.9;
+	/*opacity: 0.9;*/
 	float: left;
-	width: 60%;
+	width: 50%;
 	padding:20px;
-	margin: 10px;
+}
 
+.edit_form {
+	position: absolute;
+/*	transform: translate(0, 70%);*/
+}
+
+.edit_stats {
+	color: white;
 }
 
 
@@ -426,10 +462,13 @@ span, p {
 
 footer {
     position: fixed;
-    height: 25px;
+    height: 50px;
     bottom: 0;
     width: 100%;
-    /*background-color: black;*/
+    z-index: 9999;
+    color: black;
+    background-color: black;
+    text-align: center;
     /*padding-left: 100px;*/
     /*opacity: 0.5;*/
 }
@@ -452,27 +491,12 @@ footer {
 	font-family: 'Permanent Marker', cursive;
 }
 
-.addpersona {
+.addform {
 	position: absolute;
 	transform: translate(0,70%);
 }
 
 
 
-
-
-.welcomebanner {
-	border: 1px solid black;
-	display: block;
-	color: white;
-	width: 50%;
-	margin-top: 20px;
-	background-color: black;
-}
-
-.welcomebanner h1 {
-	text-align: center;
-	color: white;
-}
 
 

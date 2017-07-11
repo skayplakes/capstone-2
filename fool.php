@@ -14,13 +14,12 @@
 
 	<link rel="stylesheet" type="text/css" href="styles.css">
 
-
 </head>
 <body class="allpersonas">
 
 <?php
 
-	require_once('connection.php');
+	require('connection.php');
 	$sql = "SELECT * FROM persona";
 
 	$show = mysqli_query($connect,$sql);
@@ -34,12 +33,14 @@
     				<div class='offset-md-2 col-md-8'>
     					<div class='row col-sm-4'>
 				    		<a href='addpersona.php'>
-							    <img src='images/add.png' class='img-responsive addbutton' />
+							    <img src='images/addnew.png' class='img-responsive addbutton' />
 							</a>
 						</div>
 					</div>
 				</div>
 			</div>";
+
+
     				
     	while ($row = mysqli_fetch_assoc($show)) { 
           extract($row);
@@ -50,7 +51,6 @@
 	          				<div class='row col-sm-4'>
 	          					<a href='update.php?id=$id'>
 		          					<h1 class='personaname'>$name</h1>
-		          					<br>
 		          				</a>
 		          			</div>
 		          		</div>
@@ -65,18 +65,16 @@
 
 
 
-<a href="loadingpage.php">
-    <img src="images/back.png" class='img-responsive backbutton' />
+<a href="loadingpage.php" class="backbutton">
+    <img src="images/back.png" class='img-responsive' />
 </a>
 
-<?php require_once('partials/footer.php'); ?>
+<?php require('partials/footer.php'); ?>
 
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
 
 	<!-- Latest compiled and minified JavaScript -->
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
-
-	</script>
 
 </body>
 </html>

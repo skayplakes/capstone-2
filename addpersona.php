@@ -10,6 +10,8 @@
     <!-- Latest compiled and minified CSS -->
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
 
+	<link href="https://fonts.googleapis.com/css?family=Permanent+Marker" rel="stylesheet">
+
 	<link rel="stylesheet" type="text/css" href="styles.css">
 
 
@@ -79,11 +81,53 @@ require_once 'connection.php';
 				<div class="form-group">
 					<input class="btn btn-danger" class="btn btn-default" type="submit" name="cancel" value="Cancel">
 				</div>
+
+				<table class='table table-bordered table-condensed stats-persona table-responsive'>
+		        	<thead>
+		        		<tr class>
+		        			<th class='warning'>HP</th>
+		        			<th class='success'>Resists</th>
+		        			<th class='danger'>Weakness</th>
+		        		</tr>
+				        	<tbody>
+				        		<tr>
+				        			<td><input type='number' name='HP' placeholder='HP' value='$HP'></td>
+				        			<td><input type='text' name='strong' placeholder='Strong Against' value='$strongAgainst'></td>
+				        			<td><input type='text' name='weak' placeholder='Weak Against' value='$weakAgainst'></td>
+				        		</tr>
+				        	</tbody>
+		        		<tr>
+		        			<th class='warning'>Primary Skill</th>
+		        			<th class='success'>Description</th>
+		        			<th class='danger'>Damage</th>
+		        		</tr>
+				        	<tbody>
+				        		<tr>
+				        			<td><input type='text' name='primaryskill' placeholder='Primary Skill' value='$primarySkill'></td>
+				        			<td><input type='text' name='primarydescription' placeholder='Primary Description' value='$primaryDescription'></td>
+				        			<td><input type='number' name='primarydamage' placeholder='Primary Damage' value='$primaryDamage'></td>
+				        		</tr>
+				        	</tbody>
+		        		<tr>
+		        			<th class='warning'>Secondary Skill</th>
+		        			<th class='success'>Description</th>
+		        			<th class='danger'>Damage</th>
+		        		</tr>
+				        	<tbody>
+				        		<tr>
+				        			<td><input type='text' name='secondaryskill' placeholder='Secondary Skill' value='$secondarySkill'></td>
+				        			<td><input type='text' name='secondarydescription' placeholder='Secondary Description' value='$secondaryDescription'></td>
+				        			<td><input type='number' name='secondarydamage' placeholder='Secondary Damage' value='$secondaryDamage'></td>
+				        		</tr>
+				        	</tbody>
+		        	</thead>
+				</table>
 		</fieldset>
 	</form>	
 
 </div>
 
+<?php require('partials/footer.php'); ?>
 
 	<script src="jquery-3.2.1.min.js"></script>
 

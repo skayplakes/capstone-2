@@ -33,11 +33,11 @@ require_once('connection.php');
 		while ($row=mysqli_fetch_assoc($result)) {
 			extract($row);
 		}
-		echo "<div class='container-fluid'>
+		echo "<div class='container-fluid table-edit'>
 				<div class='table-responsive'>
 					<form action='' method='POST'>
 						<fieldset style=width: 30%;'>
-							<legend><h1>EDIT PERSONA</h1></legend>
+							<h1>EDIT PERSONA</h1>
 								<div class='form-group'>
 									Name: <input type='text' name='name' placeholder='Name' value='$name'>
 								</div>
