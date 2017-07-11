@@ -44,45 +44,46 @@ require_once 'connection.php';
 
 ?>
 
-	<div class="container-fluid">
-		<form id="register" action="" method="POST">
-			<fieldset>
-				<legend><h1 class="add">Register a new Persona</h1></legend>
-					<div class="form-group">
-						<input type="text" name="name" placeholder="Name">
-					</div>
+<div class="container-fluid addform">
+	<form id="register" action="" method="POST">
+		<fieldset>
+			<legend><h1 class="add">Register a new Persona</h1></legend>
+				<div class="form-group">
+					<input type="text" name="name" placeholder="Name">
+				</div>
 
-					<select name="arcana" class="form-control">
-						<option value="pick">--Select Arcana--</option>
-						<?php
-							require('connection.php');
+				<select name="arcana" class="form-control">
+					<option value="pick">--Select Arcana--</option>
+					<?php
+						require('connection.php');
 
-							$sql = mysqli_query($connect, "SELECT * FROM arcana");
-							$row = mysqli_num_rows($sql);
-							while ($row = mysqli_fetch_array($sql)){
-							echo "<option value='". $row['arcanaName'] ."'>" .$row['arcanaName'] ."</option>" ;
-							}
-						?>
-					</select> <!--dropdown list taken from database-->
+						$sql = mysqli_query($connect, "SELECT * FROM arcana");
+						$row = mysqli_num_rows($sql);
+						while ($row = mysqli_fetch_array($sql)){
+						echo "<option value='". $row['arcanaName'] ."'>" .$row['arcanaName'] ."</option>" ;
+						}
+					?>
+				</select> <!--dropdown list taken from database-->
 
-					<br>
+				<br>
 
-					<div class="form-group">
-						<textarea class="form-control" rows="4" name="description" placeholder="Description"></textarea>
-					</div>
-					<div class="form-group">
-						<input type="file" name="image" placeholder="Image">
-					</div>
-					<div class="form-group">
-						<input class="btn btn-success" class="btn btn-default" type="submit" name="add_persona" value="Add Item">
-					</div>
-					<div class="form-group">
-						<input class="btn btn-danger" class="btn btn-default" type="submit" name="cancel" value="Cancel">
-					</div>
-			</fieldset>
-		</form>	
+				<div class="form-group">
+					<textarea class="form-control" rows="4" name="description" placeholder="Description"></textarea>
+				</div>
+				<div class="form-group">
+					<input type="file" name="image" placeholder="Image">
+				</div>
+				<div class="form-group">
+					<input class="btn btn-success" class="btn btn-default" type="submit" name="add_persona" value="Add Item">
+				</div>
+				<div class="form-group">
+					<input class="btn btn-danger" class="btn btn-default" type="submit" name="cancel" value="Cancel">
+				</div>
+		</fieldset>
+	</form>	
 
-	</div>
+</div>
+
 
 	<script src="jquery-3.2.1.min.js"></script>
 

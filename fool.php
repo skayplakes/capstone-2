@@ -50,6 +50,7 @@
 	          				<div class='row col-sm-4'>
 	          					<a href='update.php?id=$id'>
 		          					<h1 class='personaname'>$name</h1>
+		          					<br>
 		          				</a>
 		          			</div>
 		          		</div>
@@ -64,8 +65,8 @@
 
 
 
-<a href="loadingpage.php" class="backbutton">
-    <img src="images/back.png" class='img-responsive' />
+<a href="loadingpage.php">
+    <img src="images/back.png" class='img-responsive backbutton' />
 </a>
 
 <?php require_once('partials/footer.php'); ?>

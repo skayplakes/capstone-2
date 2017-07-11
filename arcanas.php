@@ -40,12 +40,12 @@ require_once('connection.php');
                     </div>
                     <div class='row col-sm-8'>
                         <h2 class='arcananame'>$arcanaName</h2>
-                        <button type='button' class='btn btn-default' data-toggle='collapse' data-target='#description".$id."'>Click to show description</button>".'<br>'."
+                        <button type='button' class='btn btn-default' data-toggle='collapse' data-target='#description".$id."'>Description</button>".'<br>'."
                             <p id='description".$id."' class='collapse'>$arcanaDescription</p>
 
                             ".'<br>'."";
 
-                            echo '<a href="new2.php?category='.$arcanaName.'"><p>Click here to see the list of Personas</p></a>
+                            echo '<a href="new2.php?category='.$arcanaName.'"><p>Click here to see the list of Personas from the '.$arcanaName.' arcana</p></a>
                     </div>
                 </div>';              
            

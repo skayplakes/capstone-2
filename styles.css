@@ -127,8 +127,37 @@ h2 {
 
 .imagenavbar {
 	position: absolute;
-	transform: translate(7%, 45%);
+	transform: translate(7%, 20%);
 }
+
+.arcanas {
+	border:outset;
+    border-color: transparent;
+}
+
+.personas {
+	border:outset;
+    border-color: transparent;
+}
+
+.arcanas:hover {
+  -o-transition:.5s;
+  -ms-transition:.5s;
+  -moz-transition:.5s;
+  -webkit-transition:.5s;
+  transition:.5s;
+  box-shadow: 10px 10px 5px black;
+}
+
+.personas:hover {
+  -o-transition:.5s;
+  -ms-transition:.5s;
+  -moz-transition:.5s;
+  -webkit-transition:.5s;
+  transition:.5s;
+  box-shadow: 10px 10px 5px black;
+}
+
 
 /* ============================================================
   ALL PERSONA PAGE
@@ -153,10 +182,17 @@ h2 {
     bottom:0;
     right:0;
     z-index: 9999;
+
 }
 
-.addbutton {
+.addbutton:hover {
 	padding-left: 10px;
+	-o-transition:.5s;
+  -ms-transition:.5s;
+  -moz-transition:.5s;
+  -webkit-transition:.5s;
+  transition:.5s;
+  box-shadow: 5px 5px 5px black;
 }
 
 .personaname {
@@ -383,6 +419,7 @@ span, p {
 
 }
 
+
 /* ============================================================
   FOOTER PAGE
 ============================================================ */
@@ -392,9 +429,9 @@ footer {
     height: 25px;
     bottom: 0;
     width: 100%;
-    background-color: black;
-    padding-left: 100px;
-    opacity: 0.8;
+    /*background-color: black;*/
+    /*padding-left: 100px;*/
+    /*opacity: 0.5;*/
 }
 
 /* ============================================================
@@ -410,13 +447,32 @@ footer {
     background-size: cover;
 }
 
-h1.add {
+.add {
 	color: white;
+	font-family: 'Permanent Marker', cursive;
 }
 
 .addpersona {
 	position: absolute;
 	transform: translate(0,70%);
+}
+
+
+
+
+
+.welcomebanner {
+	border: 1px solid black;
+	display: block;
+	color: white;
+	width: 50%;
+	margin-top: 20px;
+	background-color: black;
+}
+
+.welcomebanner h1 {
+	text-align: center;
+	color: white;
 }
 
 
