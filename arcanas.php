@@ -22,8 +22,6 @@
 
 <?php
 
-
-
 require_once('connection.php');
     $sql = "SELECT * FROM arcana";
 
@@ -48,15 +46,13 @@ require_once('connection.php');
                             echo '<a href="new2.php?category='.$arcanaName.'"><p>Click here to see the list of Personas from the '.$arcanaName.' arcana</p></a>
                     </div>
                 </div>';              
-           
         }
-
     }
 
 ?>
 
 <a href="loadingpage.php" class="backbutton">
-    <img src="images/back.png" class='img-responsive' />
+    <img src="images/back1.png" class='img-responsive' />
 </a>
 
 <?php require('partials/footer.php'); ?>

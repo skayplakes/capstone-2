@@ -40,8 +40,6 @@
 				</div>
 			</div>";
 
-
-    				
     	while ($row = mysqli_fetch_assoc($show)) { 
           extract($row);
           	echo "
@@ -63,10 +61,8 @@
 ?>
 
 
-
-
 <a href="loadingpage.php" class="backbutton">
-    <img src="images/back.png" class='img-responsive' />
+    <img src="images/back1.png" class='img-responsive' />
 </a>
 
 <?php require('partials/footer.php'); ?>

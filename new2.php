@@ -19,7 +19,7 @@ $show = mysqli_query($connect,$sql);
           	echo "<title>$arcanaName</title>";
           }
     }
-
+//to get the name of the clicked object
 ?>
 
 	<meta charset="utf-8">
@@ -53,28 +53,26 @@ $show = mysqli_query($connect,$sql);
           extract($row);
 
           	echo "
-          			<div class='container'>
-		          		<div class='row'>	
-		          			<div id='effect-5' class='effects clearfix'>
-							    <div class='img'>
-							        <img src='images/$image' alt='personaimages'>
-							        <div class='overlay'>
-							            <a href='update.php?id=$id' class='expand'>+</a>
-							            <a class='close-overlay hidden'>x</a>
-							        </div>
-							    </div>
-							</div>
-
+      			<div class='container'>
+	          		<div class='row'>	
+	          			<div id='effect-5' class='effects clearfix'>
+						    <div class='img'>
+						        <img src='images/$image' alt='personaimages'>
+						        <div class='overlay'>
+						            <a href='update.php?id=$id' class='expand'>+</a>
+						            <a class='close-overlay hidden'>x</a>
+						        </div>
+						    </div>
 						</div>
-					</div>";
-				    
 
+					</div>
+				</div>";	    
       		}
       	}
 ?>
 
 <a href="loadingpage.php" class="backbutton">
-    <img src="images/back.png" class='img-responsive' />
+    <img src="images/back1.png" class='img-responsive' />
 </a>
 
 <?php require('partials/footer.php'); ?>
@@ -87,6 +85,7 @@ $show = mysqli_query($connect,$sql);
 	<!-- Latest compiled and minified JavaScript -->
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
 
+	<!--effects for hover image-->
 	<script type="text/javascript">
 		$(document).ready(function(){
 		    if (Modernizr.touch) {

@@ -60,7 +60,7 @@ require_once('connection.php');
 						        	<tbody>
 						        		<tr>
 						        			<td><input type='text' name='primaryskill' placeholder='Primary Skill' value='$primarySkill'></td>
-						        			<td><input type='text' name='primarydescription' placeholder='Primary Description' value='$primaryDescription'></td>
+						        			<td><textarea class='form-control' name='primarydescription' rows='2' placeholder='Primary Description'>$primaryDescription</textarea></td>
 						        			<td><input type='number' name='primarydamage' placeholder='Primary Damage' value='$primaryDamage'></td>
 						        		</tr>
 						        	</tbody>
@@ -72,7 +72,7 @@ require_once('connection.php');
 						        	<tbody>
 						        		<tr>
 						        			<td><input type='text' name='secondaryskill' placeholder='Secondary Skill' value='$secondarySkill'></td>
-						        			<td><input type='text' name='secondarydescription' placeholder='Secondary Description' value='$secondaryDescription'></td>
+						        			<td><textarea class='form-control' name='secondarydescription' rows='2' placeholder='Secondary Description'>$secondaryDescription</textarea></td>
 						        			<td><input type='number' name='secondarydamage' placeholder='Secondary Damage' value='$secondaryDamage'></td>
 						        		</tr>
 						        	</tbody>

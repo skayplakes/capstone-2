@@ -49,11 +49,14 @@ require_once('connection.php');
 									<textarea class='form-control' name='description' rows='4' placeholder='Description'>$description</textarea>
 								</div>
 								<div class='form-group'>
-									Image: <input type='file' name='image' placeholder='Image' value='$image' required>
+									Image: <input type='file' name='image' placeholder='Image' value='$image'>
 								</div>
 								<div class='form-group'>
 									<button class='btn btn-success' class='btn btn-default' type='submit' name='update'>Update</button>
 								</div>
+								<div class='form-group'>
+								<button class='btn btn-danger' class='btn btn-default' type='submit' name='cancel' value='Cancel'>Cancel</button>
+							</div>
 						</fieldset>
 					</form>
 				</div>	
@@ -73,7 +76,7 @@ require_once('connection.php');
 		}
 
 		if (isset($_POST['cancel'])) {
-			header('location: new2.php');
+			header('location: fool.php');
 		}
 
 	}

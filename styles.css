@@ -380,7 +380,7 @@ span, p {
 
 .table-responsive {
 	background-color: white;
-	opacity: 0.8;
+	/*opacity: 0.8;*/
 	float: left;
 	width: 50%;
 	padding: 10px;
@@ -417,9 +417,9 @@ span, p {
 	border: 1px solid black;
 	margin: 10px;
 	background-color: black;
-	opacity: 0.7;
+	/*opacity: 0.7;*/
 	width: 50%;
-	transform: translate(0, 35%);
+	transform: translate(0, 70%);
 }
 
 .deletetable h2 {
@@ -448,7 +448,7 @@ span, p {
 
 .edit_form {
 	position: absolute;
-/*	transform: translate(0, 70%);*/
+	transform: translate(0, 60%);
 }
 
 .edit_stats {
